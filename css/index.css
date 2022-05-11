@@ -1,9 +1,9 @@
 /* Colors */
 :root {
   --lightgray: #e0e0e0;
-  --gray: #C0C0C0;
+  --gray: #c0c0c0;
   --darkgray: #333;
-  --navy: #17050F;
+  --navy: #17050f;
   --blue: #082840;
   --white: #fff;
 }
@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
-  background-color: var(--white);
+  background-color: var(--gray);
 }
 p:last-child {
   margin-bottom: 0;
@@ -63,7 +63,10 @@ table th {
 
 pre,
 code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+    "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 pre {
@@ -82,7 +85,7 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   background-color: #f6f6f6;
 }
 code {
@@ -147,8 +150,8 @@ code {
   word-spacing: -0.5px;
 }
 .postlist-link {
-  padding-left: .25em;
-  padding-right: .25em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
   text-underline-position: from-font;
   text-underline-offset: 0;
   text-decoration-thickness: 1px;
@@ -160,7 +163,6 @@ code {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
 }
-
 
 /* Tags */
 .post-tag {
@@ -205,7 +207,7 @@ a[href].post-tag:focus {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
-  margin-left: .1em;
+  margin-left: 0.1em;
 }
 a[href].direct-link,
 a[href].direct-link:visited {
