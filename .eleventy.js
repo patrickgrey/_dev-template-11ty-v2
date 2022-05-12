@@ -46,8 +46,8 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "source",
       output: "publish",
-      data: "_data",
-      includes: "_includes",
+      data: "../_utilities/_data",
+      includes: "../_utilities/_includes",
     },
   };
 };

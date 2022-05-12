@@ -22,9 +22,11 @@
 
     <main>
 
-      <p>
+      {# <p>
         <a href="{{ '/page1' | url }}">Page 1</a>
-      </p>
+      </p> #}
+
+      {{ courseContent.tree | safe }}
 
     </main>
 
