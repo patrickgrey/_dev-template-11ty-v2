@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>Your Blog Name</title>
+    <meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+    <meta name="generator" content="Eleventy v2.0.0">
 
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="/css/index.css">
 
-    <script type="module" defer src="{{ '/js/loader.mjs' | url }}"></script>
+    <script type="module" defer src="/js/main.js"></script>
 
   </head>
   <body>
     <header>
       <h1 class="home">
-        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+        <a href="/">Your Blog Name</a>
       </h1>
 
     </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main class="tmpl-home">
 
       <!-- Delete this message -->
       <div class="warning">
@@ -36,11 +36,13 @@
       </div>
       <!-- Stop deleting -->
 
-      {{ content | safe }}
+      <h1>Hi</h1>
+<h2>Ho</h2>
+
     </main>
 
     <footer></footer>
 
-    <!-- Current page: {{ page.url | url }} -->
+    <!-- Current page: / -->
   </body>
 </html>

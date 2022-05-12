@@ -4,9 +4,9 @@ const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("source/img");
+  eleventyConfig.addPassthroughCopy("source/css");
+  eleventyConfig.addPassthroughCopy("source/js");
 
   // Add plugins
   eleventyConfig.addPlugin(EleventyVitePlugin);
@@ -39,15 +39,15 @@ module.exports = function (eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
 
     // Optional (default is shown)
-    pathPrefix: "/",
+    // pathPrefix: "source",
     // -----------------------------------------------------------------
 
     // These are all optional (defaults are shown):
     dir: {
-      input: ".",
-      includes: "_includes",
+      input: "source",
+      output: "publish",
       data: "_data",
-      output: "_site"
-    }
+      includes: "_includes",
+    },
   };
 };
