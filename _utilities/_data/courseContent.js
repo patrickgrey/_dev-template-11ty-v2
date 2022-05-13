@@ -9,7 +9,7 @@ const filteredTree = dirTree(source, {
   attributes: ["size", "type", "extension"]
 });
 
-console.log("filteredTree", filteredTree);
+// console.log("filteredTree", filteredTree);
 
 // Recursive traverse object utility function.
 const traverse = function (o, fn, scope = []) {
@@ -46,18 +46,18 @@ traverse(filteredTree, (key, value, scope) => {
   }
 });
 
-console.log("pathArray", pathArray);
+// console.log("pathArray", pathArray);
 
 // Remove the contents and template files.
 let filteredPaths = pathArray.filter(function (path) {
   if (
-    path === `${source}/_course-intro-template/index.html` ||
-    path === `${source}/_web-page-template/index.html` ||
-    path === `${source}/_direct-access/index.html` ||
-    path === `${source}/_direct-access/syllabus.html` ||
-    path === `${source}/_direct-access/placeholder.html` ||
-    path === `${source}/_shared/_styleguide/index.html` ||
-    path === `${source}/index.html`
+    path === `${source}/_course-intro-template/index.njk` ||
+    path === `${source}/_web-page-template/index.njk` ||
+    path === `${source}/_direct-access/index.njk` ||
+    path === `${source}/_direct-access/syllabus.njk` ||
+    path === `${source}/_direct-access/placeholder.njk` ||
+    path === `${source}/_shared/_styleguide/index.njk` ||
+    path === `${source}/index.njk`
   ) {
     return false;
   } else {
@@ -134,7 +134,7 @@ function parseData(data) {
 
   // Eh??
 
-  contentsString += `<p class="ians-contents-level-root"><a href="_shared/_styleguide/index.html">styleguide</a></p>`;
+  // contentsString += `<p class="ians-contents-level-root"><a href="_shared/_styleguide/index.html">styleguide</a></p>`;
 
   // contentsString += `<p class="ians-contents-level-root"><a href="_direct-access/${metaData.courseCode}_DA.html">Direct Access</a></p>`;
 

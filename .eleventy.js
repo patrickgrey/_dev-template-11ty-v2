@@ -1,6 +1,17 @@
 // const fs = require("fs");
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
+const fs = require("fs");
+const CleanCSS = require("clean-css");
 
+function coreStyles() {
+  let code = fs.readFileSync(
+    `./publish/_shared/_styleguide/ians-styleguide.css`,
+    "utf8"
+  );
+  code += fs.readFileSync(`./publish/_shared/_shared.css`, "utf8");
+  const minified = new CleanCSS({}).minify(code).styles;
+  return minified;
+}
 
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
@@ -10,6 +21,31 @@ module.exports = function (eleventyConfig) {
 
   // Add plugins
   eleventyConfig.addPlugin(EleventyVitePlugin);
+
+  // Add shortcodes
+  eleventyConfig.addNunjucksShortcode("coreStyles", coreStyles);
+  eleventyConfig.addNunjucksShortcode("lmsBanner", function () {
+    let html = ``;
+    if (process.env.NODE_ENV === "development") {
+      html = `<div class="ians-lms-banner">
+		<a href="/index.html">&lt;&lt; Back</a>
+	</div>`;
+    }
+    return html;
+  });
+  eleventyConfig.addNunjucksShortcode("vimeo", function (id) {
+    return `<div class="ians-video-16-9">
+		<iframe
+			src="https://player.vimeo.com/video/${id}"
+			loading="lazy"
+			width="640"
+						height="564"
+						frameborder="0"
+						allow="autoplay; fullscreen"
+						allowfullscreen
+		></iframe>
+	</div>`;
+  });
 
 
   return {

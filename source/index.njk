@@ -1,49 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <meta name="description" content="desc">
-    <meta name="generator" content="{{ eleventy.generator }}">
-
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-
-    <script type="module" defer src="{{ '/js/main.js' | url }}"></script>
-
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ metadata.courseTitle }}</title>
+    <style>
+      {% coreStyles %}
+    </style>
+    <link rel="stylesheet" href="{{ 'css/index.css' | url }}"/>
   </head>
   <body>
-    <header>
-      <h1 class="home">
-        <a href="{{ '/' | url }}">Home Page</a>
-      </h1>
-
+    <header class="ians-column-wide-1 mt-12">
+      <h1>{{ metadata.courseTitle }}</h1>
     </header>
+    <main class="flow">
+      <div class="ians-column flow mb-10">
 
-    <main>
+        {{ courseContent.tree | safe }}
 
-      {# <p>
-        <a href="{{ '/page1' | url }}">Page 1</a>
-      </p> #}
-
-      {{ courseContent.tree | safe }}
-
-      <p class="ians-contents-level-root">
-        <a href="_direct-access/{{ metadata.courseCode }}_DA.html"
+        <p class="ians-contents-level-root">
+          <a href="_shared/_styleguide/index.html"
 						>Style Guide</a
 					>
-      </p>
+        </p>
 
-      <p class="ians-contents-level-root">
-        <a href="_direct-access/{{ metadata.courseCode }}_DA.html"
+        <p class="ians-contents-level-root">
+          <a href="_direct-access/{{ metadata.courseCode }}_DA.html"
 						>Direct Access</a
 					>
-      </p>
+        </p>
+
+      </div>
 
     </main>
 
-    <footer></footer>
-
-    <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
