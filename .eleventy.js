@@ -1,24 +1,67 @@
 // const fs = require("fs");
 require("dotenv").config();
+const path = require("path");
+const Image = require("@11ty/eleventy-img");
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const fs = require("fs");
 const CleanCSS = require("clean-css");
 
+const source = "course-source";
+const publish = "course-publish";
+
 function coreStyles() {
   let code = fs.readFileSync(
-    `./course-publish/_shared/_styleguide/ians-styleguide.css`,
+    `./${publish}/_shared/_styleguide/ians-styleguide.css`,
     "utf8"
   );
-  code += fs.readFileSync(`./course-publish/_shared/_shared.css`, "utf8");
+  code += fs.readFileSync(`./${publish}/_shared/_shared.css`, "utf8");
   const minified = new CleanCSS({}).minify(code).styles;
   return minified;
 }
 
+async function imageShortcode(src, alt, cls, sizes, widths, formats) {
+  const imagePath = path.dirname(src);
+  const urlPath = imagePath + "/";
+  const outputDir = "./" + publish + this.page.url + imagePath + "/";
+  const imageSource = "./" + source + this.page.url + src;
+  const sizesString = sizes || `(max-width: 2400px) 100vw, 2400px`;
+
+  let metadata = await Image(imageSource, {
+    widths: widths || [320, 640, 960, 1200, 1800, 2400],
+    formats: formats || ["avif", "webp", "jpeg"],
+    urlPath: urlPath,
+    outputDir: outputDir,
+  });
+
+  let imageAttributes = {
+    class: cls || "",
+    alt,
+    sizes: sizesString,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = function (eleventyConfig) {
-  // Copy the `img` and `css` folders to the output
-  // eleventyConfig.addPassthroughCopy("source/img");
-  eleventyConfig.addPassthroughCopy("course-source/**/*.css");
-  eleventyConfig.addPassthroughCopy("course-source/**/*.js");
+  eleventyConfig.addPassthroughCopy(`${source}/index.css`);
+  // Shortcodes take care of copying images.
+  // What about images for animations???? Shortcode for animations which deal with this?
+  // Solution: keep copying images and it is up to developers to optimise for the largest size image.
+
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.jpg`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.jpeg`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.png`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.svg`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.webp`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.avif`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.mp3`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.pdf`);
+
+  // eleventyConfig.addWatchTarget(`./${source}/index.css`);
+  // eleventyConfig.addWatchTarget(`./${source}/**/*.css`);
+  // eleventyConfig.addWatchTarget(`./${source}/**/*.js`);
 
   // Add plugins
   if (process.env.NODE_ENV === "development") {
@@ -46,6 +89,17 @@ module.exports = function (eleventyConfig) {
 						frameborder="0"
 						allow="autoplay; fullscreen"
 						allowfullscreen
+		></iframe>
+	</div>`;
+  });
+  eleventyConfig.addNunjucksShortcode("video", function (id) {
+    return `<div class="ians-video-16-9">
+		<iframe
+			src="https://www.youtube.com/embed/${id}?rel=0&showinfo=0"
+			loading="lazy"
+			frameborder="0"
+			allowfullscreen
+			title="Youtube video"
 		></iframe>
 	</div>`;
   });
@@ -83,8 +137,8 @@ module.exports = function (eleventyConfig) {
 
     // These are all optional (defaults are shown):
     dir: {
-      input: "course-source",
-      output: "course-publish",
+      input: source,
+      output: publish,
       data: "../_utilities/_data",
       includes: "../_utilities/_includes",
     },

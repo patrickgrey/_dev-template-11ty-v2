@@ -53,10 +53,6 @@ let pathArray = [];
 let previousPath = "";
 
 traverse(filteredTree, (key, value, scope) => {
-  if (key === "extension") {
-    console.log("Key: ", key);
-    console.log("Value: ", value);
-  }
   if (key === "path") {
     previousPath = value;
   }
