@@ -1,4 +1,4 @@
-import { ScrollToTop } from "/_shared/_components/ScrollToTop";
+import { ScrollToTop } from "ScrollToTop";
 
 var pageModule = (function () {
   var module = {};

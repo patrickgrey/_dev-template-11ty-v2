@@ -1,14 +1,15 @@
 // const fs = require("fs");
+require("dotenv").config();
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const fs = require("fs");
 const CleanCSS = require("clean-css");
 
 function coreStyles() {
   let code = fs.readFileSync(
-    `./publish/_shared/_styleguide/ians-styleguide.css`,
+    `./course-publish/_shared/_styleguide/ians-styleguide.css`,
     "utf8"
   );
-  code += fs.readFileSync(`./publish/_shared/_shared.css`, "utf8");
+  code += fs.readFileSync(`./course-publish/_shared/_shared.css`, "utf8");
   const minified = new CleanCSS({}).minify(code).styles;
   return minified;
 }
@@ -16,11 +17,13 @@ function coreStyles() {
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   // eleventyConfig.addPassthroughCopy("source/img");
-  eleventyConfig.addPassthroughCopy("source/**/*.css");
-  eleventyConfig.addPassthroughCopy("source/**/*.js");
+  eleventyConfig.addPassthroughCopy("course-source/**/*.css");
+  eleventyConfig.addPassthroughCopy("course-source/**/*.js");
 
   // Add plugins
-  eleventyConfig.addPlugin(EleventyVitePlugin);
+  if (process.env.NODE_ENV === "development") {
+    eleventyConfig.addPlugin(EleventyVitePlugin);
+  }
 
   // Add shortcodes
   eleventyConfig.addNunjucksShortcode("coreStyles", coreStyles);
@@ -80,8 +83,8 @@ module.exports = function (eleventyConfig) {
 
     // These are all optional (defaults are shown):
     dir: {
-      input: "source",
-      output: "publish",
+      input: "course-source",
+      output: "course-publish",
       data: "../_utilities/_data",
       includes: "../_utilities/_includes",
     },

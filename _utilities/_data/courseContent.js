@@ -2,7 +2,7 @@ const { data } = require("autoprefixer");
 const dirTree = require("directory-tree");
 // const metaData = require("./metaData.json");
 
-const source = "source";
+const source = "course-source";
 // Get the file tree structure from the source folder.
 const filteredTree = dirTree(source, {
   extensions: /\.njk/,
