@@ -4,14 +4,17 @@ const dirTree = require("directory-tree");
 const AdmZip = require("adm-zip");
 require("dotenv").config();
 
-const source = process.env.COURSE_PRODUCTION_FOLDER || "course-publish";
+const source = "course-publish";
 const maxMBFileSize = process.env.COURSE_MAXMB_FILESIZE || 2;
-const allowFiles = ['.mp3', '.html', '.js', '.css', '.pdf'];
+const allowFiles = ['.mp3', '.html', '.js', '.css', '.pdf', '.gif'];
 
 const filteredTree = dirTree(source, {
+  attributes: ['extension'],
   extensions: /\.html/,
   exclude: /_data/,
 });
+
+// console.log(filteredTree);
 
 const traverse = function (o, fn, scope = []) {
   for (let i in o) {
@@ -50,6 +53,10 @@ let pathArray = [];
 let previousPath = "";
 
 traverse(filteredTree, (key, value, scope) => {
+  if (key === "extension") {
+    console.log("Key: ", key);
+    console.log("Value: ", value);
+  }
   if (key === "path") {
     previousPath = value;
   }
@@ -60,6 +67,8 @@ traverse(filteredTree, (key, value, scope) => {
 
 pathArray.splice(pathArray.indexOf(`${source}\\_web-page-template`), 1);
 pathArray.splice(pathArray.indexOf(`${source}\\index.html`), 1);
+
+console.log(pathArray);
 
 const zipArray = pathArray.map((item) => {
   const splitPath = item.split("\\");

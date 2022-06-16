@@ -14,7 +14,7 @@
     "build:js": "node _utilities/esbuild-glob-entry.mjs",
     "build:zip": "node _utilities/zip-it-and-ship-it.js",
     "build:http-server": "dotenv -- cross-var http-server course-publish -c-1",
-    "build": "cross-env NODE_ENV=production run-s clean build:postcss build:eleventy build:js build:zip build:http-server"
+    "build": "cross-env NODE_ENV=production run-s clean build:postcss build:eleventy build:js build:zip"
   },
   "repository": {
     "type": "git",
