@@ -72,6 +72,9 @@ module.exports = function (eleventyConfig) {
   // https://github.com/vitejs/vite/issues/88#issuecomment-804980262
 
   // https://github.com/vitejs/vite/issues/279#issuecomment-635646269
+
+
+  // https://github.com/matthiasott/eleventy-plus-vite 
   if (process.env.NODE_ENV === "development") {
     eleventyConfig.addPlugin(EleventyVitePlugin, {
       resolve: {
