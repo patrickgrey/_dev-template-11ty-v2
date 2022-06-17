@@ -58,14 +58,28 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(`${source}/**/*.avif`);
   eleventyConfig.addPassthroughCopy(`${source}/**/*.mp3`);
   eleventyConfig.addPassthroughCopy(`${source}/**/*.pdf`);
+  // eleventyConfig.addPassthroughCopy(`${source}/**/*.css`);
+  eleventyConfig.addPassthroughCopy(`${source}/**/*.js`);
 
   // eleventyConfig.addWatchTarget(`./${source}/index.css`);
-  // eleventyConfig.addWatchTarget(`./${source}/**/*.css`);
-  // eleventyConfig.addWatchTarget(`./${source}/**/*.js`);
+  eleventyConfig.addWatchTarget(`${source}/**/*.css`);
+  eleventyConfig.addWatchTarget(`${source}/**/*.js`);
 
   // Add plugins
+  // Not finding local dependencies
+  // https://github.com/vitejs/vite/issues/819
+  // https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite
+  // https://github.com/vitejs/vite/issues/88#issuecomment-804980262
+
+  // https://github.com/vitejs/vite/issues/279#issuecomment-635646269
   if (process.env.NODE_ENV === "development") {
-    eleventyConfig.addPlugin(EleventyVitePlugin);
+    eleventyConfig.addPlugin(EleventyVitePlugin, {
+      resolve: {
+        alias: [
+          { find: "_components", replacement: `/${source}/_shared/_components` }
+        ]
+      },
+    });
   }
 
   // Add shortcodes

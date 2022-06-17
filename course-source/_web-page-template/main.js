@@ -1,9 +1,9 @@
-import { ScrollToTop } from "ScrollToTop";
+// import { ScrollToTop } from "ScrollToTop";
 
 var pageModule = (function () {
   var module = {};
   module.init = function () {
-    ScrollToTop();
+    // ScrollToTop();
   };
   return module;
 })();

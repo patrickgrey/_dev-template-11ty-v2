@@ -126,7 +126,7 @@ function parseData(data) {
       }
       // Add a class to indent the text.
       contentsString += `<p class="ians-contents-level-${topicsLength + 2
-        }"><a href="${item.url}">${item.page}</a></p>`;
+        }"><a href="/${item.url}">${item.page}</a></p>`;
     }
   }
 

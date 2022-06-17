@@ -7,11 +7,15 @@ const source = "course-source";
 const publish = "course-publish";
 const dev = process.env.NODE_ENV !== "production";
 
+// https://github.com/igoradamenko/esbuild-plugin-alias
 (async () => {
   let entryPoints = await glob(`${source}/**/*.js`);
+
+  console.log(entryPoints);
+
   await build({
     entryPoints,
-    nodePaths: dev ? [`${source}/_shared`] : [`${source}/_shared/_components`],
+    nodePaths: [`${source}/_shared/`],
     bundle: true,
     minify: true,
     outdir: publish,
