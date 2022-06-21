@@ -1,0 +1,6 @@
+.oj-hero-inline {
+  height: 50vh;
+  object-fit: cover;
+  object-position: top right;
+  border-bottom: 1rem solid var(--oj-yellow);
+}

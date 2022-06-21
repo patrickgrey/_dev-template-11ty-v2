@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learning</title>
+    {% coreStyles %}
+    <link rel="stylesheet" href="print.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body class="relative">
+    {% lmsBanner %}
+    <header class="ians-column-wide-1">
+      <p class="ians-breadcrumb">Human Factors&nbsp;/&nbsp;<img
+					class="oj-header-chain"
+					src="images/icon-chain.svg"
+					alt="chain link icon"
+				/></p>
+      <h1>Learning</h1>
+    </header>
+    <main>
+
+      <div class="ians-column">
+        <p>In this section we are going to consider what it means to learn, how we learn and what factors may influence a student’s ability to learn.</p>
+        <p>To start, let’s have a look at our <strong>definition</strong> of learning:</p>
+
+      </div>
+
+      <div class="oj-full-width-question">
+        <div class="ians-column-wide-3">
+          <p>A relatively permanent change in behaviour, brought about by an experience.</p>
+        </div>
+      </div>
+
+      <div class="oj-hero"></div>
+
+      <div class="ians-column mt-12">
+
+        <p>Please read the two stories below and decide, based on our definition, if learning has taken place:</p>
+
+      </div>
+
+      <div class="ians-column-double ians-grid-2 oj-stories-container">
+
+        <div>
+          <h3>A&nbsp;Scotsman&nbsp;Abroad</h3>
+
+          {% image "images/sunburn.jpg", "Photo of man at the beach with sunburn and an anguished look on his face.",
+				"oj-photo-sunburn" %}
+
+          <div class="oj-stories-content">
+
+            <p>A Scotsman travels to Spain for his <strong>first ever</strong> summer vacation abroad. He’s very excited to get to the beach! Unfortunately, <strong>sun cream</strong> was not an item he thought to include in his travel bag. After the <strong>painful</strong> experience of the first day out, lying on a beach in the Spanish sun, he quickly (although belatedly) decided to change his daily routine. After a visit to the local pharmacy for some factor 50+ sun cream and a sun hat, he spent <strong>each morning</strong> covering himself with sun cream before venturing outside.</p>
+
+            <p>The following year, this Scotsman decides that he will go back to Spain for another beach holiday. The <strong>first</strong> things he puts into his suitcase are his sun hat and sun cream.</p>
+
+            <iframe class="oj-question" src="https://trainingzone.h5p.com/content/1291432388631983777/embed" width="10" height="10" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+
+            <p>But, what if he had decided that the <strong>experience</strong> was so horrible that he would never again take a sunny beach holiday? He would never have a need for sun cream again and is likely to simply forget about it because it has no impact on his life.  So what learning has taken place? In fact, a behaviour <strong>has been learnt</strong> – he has learnt to avoid sunny beach holidays and so any time he sees advertisements for holidays with sandy beaches and sun, he practices the behaviour of avoidance.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3>An&nbsp;OJTI&nbsp;in&nbsp;the&nbsp;making</h3>
+
+          {% image "images/oleks.jpg", "Photo of man entering an office.",
+				"oj-photo-angela" %}
+
+          <div class="oj-stories-content">
+
+            <p>Jon arrives at EUROCONTROL ALC to start the <strong>practical</strong> part of the OJTI course. He learns <strong>specific</strong> operational <strong>procedures</strong> for the airspace that is used during <strong>simulations</strong> on the course that are very different to the ones he uses back home. As part of the course, he <strong>practiced</strong> delivering briefings and debriefings to ‘students’ using the airspace and procedures in the simulation.</p>
+
+            <p>Jon then <strong>goes back</strong> to his <strong>operational unit</strong>. He now delivers briefings and debriefings to students and instructs using the operational procedures of his unit.</p>
+
+            <iframe class="oj-question" src="https://trainingzone.h5p.com/content/1291432393934684487/embed" width="10" height="10" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+
+            <p>But what of the procedures he had to use while in the simulator? Having returned to his operational unit, he promptly <strong>forgot</strong> them as he had no need of them. In this case, the change of behaviour was very <strong>short-lived</strong> and so does <strong>not</strong> fit our definition of ‘learning’. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ians-column">
+
+        <p>The definition we use has a number of implications for instructing in the operational environment, that we should be aware of:</p>
+
+        <ol class="list-disc list-inside">
+          <li>A change in behaviour can be both <strong>good or bad</strong> in terms of <strong>safety, efficiency, cooperation</strong> and so on. As instructors it is our job to guide the learner towards ‘good’ behaviours.</li>
+          <li>The change in behaviour is relatively <strong>permanent</strong>, meaning that competence as a controller is only achieved once the trainee is routinely and consistently demonstrating the required behaviours.</li>
+          <li>Learning is brought about by <strong>‘experiences’</strong>. These experiences are varied and may happen directly through exposure and practice in a particular airspace (simulated or live) but are also supplemented through observation or indirectly (e.g. reading, classroom lessons, online learning, etc.)</li>
+          <li>Learning is not restricted to planned learning events. ATCOs will continue to learn and modify their behaviour <strong>throughout their careers</strong>.</li>
+        </ol>
+
+        <h2>The Learning Curve</h2>
+
+        <p>When learning takes place, as an instructor it is worth bearing in mind that different trainees will <strong>learn at different speeds</strong>. The speed and pace at which someone learns something is their learning curve and it can <strong>vary</strong> from activity to activity, and be influenced by many different factors, which we will talk about later.</p>
+
+        <p class="ians-text-instruction">Let’s try this out practically by doing the exercise below:</p>
+
+        {# <p class="oj-dev-notes">GAME HERE</p> #}
+
+      </div>
+
+      <!-- https://css-tricks.com/aspect-ratios-svg/ -->
+      <div class="oj-exercise-curve-container">
+        <div id="ojExerciseCurve" class="oj-exercise-curve">
+          {% include "./images/connection-lines.svg" %}
+        </div>
+        <div id="ojCountdown" class="oj-countdown"></div>
+        <div class="oj-exercise-curve-instructions-container">
+          <div id="ojExerciseCurveSlideStart" class="">
+            <h2>Your task:</h2>
+            <p class="block md:hidden">
+							Select as many numbers as you can in 40 seconds. You should start
+							with 1 and then select numbers in a sequence i.e. 1, 2, 3, 4 etc.
+							You will be asked to repeat the task 7 times.
+						</p>
+
+            <div class="hidden md:block oj-exercise-curve-instructions-text">
+              <p class="mx-auto">
+								When you select start, you will be shown a randomly positioned
+								set of numbers.
+							</p>
+              <p class="mx-auto">A 40 second timer will start.</p>
+              <p class="mx-auto">
+								Select as many numbers as you can in 40 seconds. You should
+								start with 1 and then select numbers in a sequence i.e. 1, 2, 3,
+								4 etc.
+							</p>
+              <p class="mx-auto">
+								You will be asked to repeat the task 7 times. After each
+								attempt, your highest number will be plotted onto a graph.
+							</p>
+            </div>
+          </div>
+          <div id="ojExerciseCurveSlideGraph" class="hidden">
+            {% include "./images/graph.svg" %}
+          </div>
+          <button id="ojExerciseCurveButtonStart">Start</button>
+          <button id="ojExerciseCurveButtonNext" class="hidden">Next</button>
+          <button id="ojExerciseCurveButtonRetry" class="hidden">
+						New Game
+					</button>
+          <button id="ojExerciseCurveButtonPrint" class="hidden">Print</button>
+        </div>
+      </div>
+      <div class="ojButtonsMobileContainer">
+        <button id="ojExerciseCurveButtonNext2" class="hidden">Next</button>
+        <button id="ojExerciseCurveButtonRetry2" class="hidden">
+					New Game
+				</button>
+        <button id="ojExerciseCurveButtonPrint2" class="hidden">Print</button>
+      </div>
+      <div class="ians-column mt-8">
+        <p>
+					It is interesting to look at your own learning curve. There is a very good chance that it was not a straight, constantly upward curve to the final standard (i.e. being able to select all the numbers in the allotted time).
+				</p>
+
+        <p>What caused <strong>dips or plateaus</strong> in your progress (if you had any)? Was it <strong>time</strong> pressure or time limitations? Did you always struggle with finding a <strong>particular number</strong>? Did you get <strong>bored</strong> with the task and lose focus? Did you reach a plateau and fail to improve beyond this? <strong>Why</strong>?</p>
+
+        <p class="ians-text-instruction">Here are some typical learning curves that trainees display in ATC training. Select the colour keys at the bottom to read possible reasons behind the graph line shape.</p>
+
+      </div>
+
+      <div class="oj-graph-lc" id="lcGraphAnchor">
+        {% include "./images/graph-lc.svg" %}
+        <div class="oj-graph-lc-text">
+          <button class="oj-graph-lc-close">X</button>
+          <p id="oj-graph-lc-text-pink">Shows <strong>steady and continuous</strong> progress of a trainee until the very end, when the performance takes a <strong>sharp dip</strong>. This could be an indicator that the trainee reached competence but became <strong>demotivated</strong> as there was no recognition of this. Unit Training Plans need to be flexible enough to accommodate trainees who <strong>exceed performance requirements</strong> early and can check out early so as not to become demotivated.</p>
+          <p id="oj-graph-lc-text-green">Shows the performance of an average trainee who makes <strong>continuous</strong> progress up until the fourth month, at which time their performance <strong>declines</strong>. This is a ‘classic’ learning curve and trainees should not become discouraged by this dip, so OJTIs should reinforce that this is <strong>‘normal’</strong>.</p>
+          <p id="oj-graph-lc-text-blue">This is sometimes the most consistent learning curve. Once everything is in place, the progress is <strong>steady and upwards</strong> to check out.</p>
+        </div>
+      </div>
+
+      <div class="ians-column">
+
+        <p>If we relate these seven runs to seven months of training for a trainee to achieve a required standard for final assessment, why would we get differences in their learning curves? </p>
+
+        <h2>Barriers to Learning</h2>
+
+        <p class="ians-text-instruction">Try to learn the list of barriers to effective learning and progress below then test yourself. When testing yourself, select each card to show / hide the text.</p>
+
+        <button id="ojBarrierButtonTest">Test yourself</button>
+
+      </div>
+
+      <div class="ians-column-wide-4">
+
+        <ul id="ojBarrierList" class="mt-12">
+          <li class="oj-notched">
+            <p>
+              <strong>Change of OJTI</strong> if the trainee is being trained by a team of instructors.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>Objectives and UTP unclear</strong> from the beginning.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>Too many training objectives</strong> added before basic skills are established.</p>
+          </li>
+          <li class="oj-notched">
+            <p>Training environment is <strong>not supportive</strong> for a struggling trainee.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>Boredom</strong> when the trainee achieves the required standard early but is not allowed to go forward for assessment and must wait until the seven month period is completed.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>Personal issues</strong> with trainee, e.g. death in family, financial issues, health, etc.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>OJTI provides less support</strong> to allow student to start making their own control decisions.</p>
+          </li>
+          <li class="oj-notched">
+            <p>
+              <strong>Training culture</strong> is not conducive to trainee learning from mistakes they make and then becomes fearful of making such mistakes.</p>
+          </li>
+          <li class="oj-notched">
+            <p>A dip in performance at the end could be a worrying realisation that soon they will be <strong>working unsupported</strong> and on their own.</p>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="ians-column">
+
+        <h2>The Four Stages of Competence</h2>
+
+        <p>The four stages of competence (sometimes called the four stages of learning) is a model that is based on the idea that <strong>before learning begins</strong>, trainees are unaware of what or how much they know (unconscious incompetence), and as they learn, they move through four stages until they reach a stage of unconscious competence.</p>
+
+        <p>An as STDI/OJTI, you can use this model to improve your instructing and teaching approach, based on the stage you identify a trainee to be at. 
+Let’s look at the model first and then some examples.</p>
+
+        <p class="ians-text-instruction"> Select the + signs to expand the information.</p>
+
+        {# <p class="oj-dev-notes">Use an icon for each stage then reuse for the examples. Use photos in the examples. Use numbered list. Arrow below each LI.</p> #}
+
+      </div>
+
+      {# <div class="oj-comp-list-container">
+        <ol class="oj-comp-list ians-grid-4">
+          <li>
+            <div class="ians-bg-blue-dark oj-notched">
+              <h3>Unconscious Incompetence</h3>
+              <div class="oj-comp-content-container">
+                <img src="images/comp-vert-1.svg" alt="Unconscious Incompetence">
+                <p>During unconscious incompetence, the trainee isn’t aware that a <strong>skill or knowledge gap exists</strong>. To move on to the second stage the trainee has to do two things; firstly, <strong>recognise</strong> their own incompetence, and secondly, see the <strong>value</strong> in the learning something new. </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div  class="ians-bg-blue-dark oj-notched">
+              <h3>Conscious Incompetence</h3>
+              <div class="oj-comp-content-container">
+                <img src="images/comp-vert-2.svg" alt="Conscious Incompetence">
+                <p>Though  the  trainee  does not  understand  or  know  how  to do  something,  s/he does recognises that there is a deficit. They also see the value of acquiring the new knowledge, skills and competencies. During this stage, it is <strong>normal for mistakes</strong> to be made as part of the learning process. It’s during this stage that <strong>learning can begin</strong>.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div  class="ians-bg-blue-dark oj-notched">
+              <h3>Conscious Competence</h3>
+              <div class="oj-comp-content-container">
+                <img src="images/comp-vert-3.svg" alt="Conscious Competence">
+                <p>During conscious competence, the trainee <strong>knows how</strong> to perform the tasks, display certain skills and demonstrate competence but to do so takes <strong>a lot of conscious effort</strong> and concentration. This is the stage where <strong>practice and repetition</strong> is important to take the trainee to the next stage.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div  class="ians-bg-blue-dark oj-notched">
+              <h3>Unconscious Competence</h3>
+              <div class="oj-comp-content-container">
+                <img src="images/comp-vert-4.svg" alt="Unconscious Competence">
+                <p>During unconscious competence, the trainee has had enough practice and exposure to allow them to <strong>perform competently without conscious effort</strong>. The trainee  has  had so much  practice that  their performance  has  become  "second  nature".  As  a result,  they can perform tasks and demonstrate skills <strong>while cognitively focussing on carrying out other tasks</strong>.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="ians-column">
+
+        <hr class="sr-only">
+
+      </div>
+
+    </div> #}
+
+      <div class="ians-column-wide-3">
+
+        <iframe src="https://trainingzone.h5p.com/content/1291576656495706287/embed" aria-label="HUM-OJTI-M 2.1 hotspot" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+
+        <p>
+        Let’s now have a look at some examples:
+      </p>
+        <h3>
+          <span class="highlight">Learning to Drive</span></h3>
+        <iframe src="https://trainingzone.h5p.com/content/1291466941751897187/embed" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+
+        <h3>
+          <span class="highlight">The ATCO</span></h3>
+        <iframe src="https://trainingzone.h5p.com/content/1291466931686269397/embed" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+      </div>
+
+      {# <div class="ians-column-double ians-grid-2">
+
+      <div class="oj-learn-to-drive">
+
+        <h3>Learning to Drive</h3>
+
+        <div class="oj-notched">
+          <h4>1. Unconscious Incompetence <img src="images/comp-horiz-1.svg" alt="Unconscious Incompetence"></h4>
+
+          {% image "images/drive-1.jpg", "Photo of woman in back seat of car.",	"oj-learn-to-drive-photo", null, [320, 640] %}
+
+          <p>An 18-year-old watches her parents drive and wants to learn to drive too. At this stage, it looks easy to her but she <strong>doesn’t really know what’s involved</strong>. She recognises that to become a good driver she will need to do some driving lessons.</p>
+        </div>
+
+        <div class="oj-notched">
+          <h4>2. Conscious Incompetence <img src="images/comp-horiz-2.svg" alt="Conscious Incompetence"></h4>
+
+          {% image "images/drive-2.jpg", "Photo of woman learning to drive with a look of concern on her face.",	"oj-learn-to-drive-photo", null, [320, 640] %}
+
+          <p>Our enthusiastic learner driver has taken two driving lessons now <strong>realises that it is more difficult to drive</strong>, park, reverse and manoeuvre through traffic than she had originally thought. She still doesn’t really know how to do these things and as a result she makes a lot of <strong>mistakes</strong>, that fortunately, her driving instructor is there to correct and to keep the situation <strong>safe</strong>.</p>
+        </div>
+
+        <div class="oj-notched">
+          <h4>3. Conscious Competence <img src="images/comp-horiz-3.svg" alt="Conscious Competence"></h4>
+
+          {% image "images/drive-3.jpg", "Photo of woman in car shaking hands with instructor.",	"oj-learn-to-drive-photo", null, [320, 640] %}
+
+          <p>Our new driver finishes two months of lessons and <strong>passes her practical</strong> exam. She is the proud owner of a drivers licence. As she ventures out onto the road by herself, she is nervous, tentative and <strong>still has to go through mental checklists</strong> but she is able to drive safely and at an acceptable standard.</p>
+        </div>
+
+        <div class="oj-notched">
+          <h4>4. Unconscious Competence <img src="images/comp-horiz-4.svg" alt="Unconscious Competence"></h4>
+
+          {% image "images/drive-4.jpg", "Photo looking at woman in car from behind and out the windsreen.",	"oj-learn-to-drive-photo", null, [320, 640] %}
+
+          <p>Our driver has been driving for 8 years now and at this stage, she drives smoothly <strong>without having to think</strong> about her actions. She spends most of her time maintaining <strong>traffic situational awareness</strong> so that she can anticipate what to do next.</p>
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>The ATCO</h3>
+
+        <div class="oj-learn-acto">
+          <div class="oj-notched">
+            <h4>1. Unconscious Incompetence <img src="images/comp-horiz-1.svg" alt="Unconscious Incompetence"></h4>
+
+            <p>While Angela is in her final year of school, she spends a week at an area control centre as a ‘work experience’ activity. She really likes what she sees and wants to learn how to do the job. Since the atmosphere in the ACC is calm and ATCOs don’t spend too much time explaining what they are doing, <strong>she doesn’t fully understand what the job entails</strong> but she is very motivated to learn. At the end of the week, she walks out with all the information she needs to submit an application to become a trainee ATC once she has graduated from school.</p>
+          </div>
+
+          <div class="oj-notched">
+            <h4>2. Conscious Incompetence <img src="images/comp-horiz-2.svg" alt="Conscious Incompetence"></h4>
+
+            <p>Angela was selected as a trainee ATCO and has started at the ATC College. She is in her first weeks of simulation training. She is <strong>making mistakes</strong> but with the help of her instructor, she is in the process of <strong>learning what she has to do</strong>. 
+          </p>
+
+            <p>She has begun to <strong>realise how complicated the job is</strong> and the many demands that are placed on her in busy complicated traffic situations. It is worth noting that at this point, her <strong>STDI</strong> is “Unconsciously Competent” and <strong>sees the problems</strong> arising at a very early stage. </p>
+
+            <p>The STDI's vision is much wider and so can anticipate and problem-solve without their workload becoming unmanageable. Angela <strong>takes much longer</strong> to anticipate problems and establish solutions. Her work is <strong>not well-structured</strong> and <strong>lacks appropriate prioritisation</strong>. This all increases her workload and sometimes leads to <strong>overload</strong> and slowing down of her mental processes.</p>
+          </div>
+
+          <div class="oj-notched">
+            <h4>3. Conscious Competence <img src="images/comp-horiz-3.svg" alt="Conscious Competence"></h4>
+
+            <p>Angela is at the end of her unit training and has <strong>passed</strong> the assessments. It <strong>still takes her time</strong> to come to the optimal solution to problems faced. She performs safely and competently but is <strong>constantly having to think</strong> about what she is doing. It is still stressful and <strong>cognitively demanding</strong> to do the job.</p>
+          </div>
+
+          <div class="oj-notched">
+            <h4>4. Unconscious Competence <img src="images/comp-horiz-4.svg" alt="Unconscious Competence"></h4>
+
+            <p>Angela has been at the ACC for eight years and controlling has become <strong>second nature</strong> to her. Many routines and tasks have been <strong>automated</strong> and all her cognitive effort goes towards identifying conflicts and finding <strong>optimal solutions</strong>. And she participates in the ‘work experience’ mentoring programme for young students who want to become ATCOs.</p>
+
+          </div>
+        </div>
+      </div>
+    </div> #}
+
+      <div class="ians-column">
+
+        <h2>Different learning styles</h2>
+
+        <p>A well-designed training course will allow a trainee to <strong>build up</strong> the knowledge, skills and competencies needed to do the job in a logical and systematic way. The <strong>structure</strong> that is put in place ensures that the trainee can <strong>connect</strong> the relevant pieces of knowledge and use the knowledge to build skills, perform tasks and demonstrate competence.</p>
+
+        <p>Some trainees prefer a <strong>building block</strong> approach; they first need foundational knowledge and then they can build up the next layer of knowledge and skills and progress stepwise towards competence. These learners are typically called <strong>‘serialistic learners’</strong>. </p>
+
+        <p>There are some learners, who prefer a more <strong>‘holistic’</strong> approach to learning. They need to understand the <strong>big picture</strong> of what they are trying to achieve and then are comfortable with working at many different levels at the same time, confident that in the end it will all start to connect.</p>
+
+        <p>In practice, <strong>no trainee</strong> is 100% a serialist or holistic learner. UTP design and instructors, switch between holistic and serialistic learning. There are times when it is most beneficial to give an overview of what is to be achieved, and there are times when it makes sense to take a stepwise approach to the learning. As an instructor, you will learn when to do this switching.</p>
+
+        <p>In addition, as an instructor it is worth <strong>paying attention</strong> to the way in which trainees take in information and use it to learn. Broadly speaking there are three ways that trainees do this. Bear in mind that although one of the styles may dominate, <strong>everyone uses all the modalities</strong> at various stages of learning.</p>
+
+        <p>In the table you can see the  different characteristics of trainees who use these modalities:</p>
+
+      </div>
+      <div class="ians-column-wide-2">
+
+        <div class="oj-table-ls-container">
+          <table class="oj-table-ls">
+            <thead>
+              <tr>
+                <th>Auditory</th>
+                <th>Visual</th>
+                <th>Kinaesthetic</th>
+              </tr>
+              <tr>
+                <th colspan="3">This trainee:</th>
+              </tr>
+              <thead>
+                <tbody>
+
+                  <tr>
+                    <td>Remembers what they hear and say</td>
+                    <td>Writes things down or draws diagrams </td>
+                    <td>Remembers what they do and experience </td>
+                  </tr>
+                  <tr>
+                    <td>Talks aloud to themselves</td>
+                    <td>Prefers written instructions</td>
+                    <td>Finds ways to move around</td>
+                  </tr>
+                  <tr>
+                    <td>Is not always good with written directions</td>
+                    <td>Has difficulty in concentrating during verbal activities</td>
+                    <td>Often touches people when talking to them</td>
+                  </tr>
+                  <tr>
+                    <td>Enjoys listening to others talk</td>
+                    <td>Watches rather than talk</td>
+                    <td>Often loses interest when not actively involved</td>
+                  </tr>
+                  <tr>
+                    <td>Likes group discussion</td>
+                    <td>Is often well organised</td>
+                    <td>Cannot sit still for long  e.g. taps pencil/foot</td>
+                  </tr>
+                  <tr>
+                    <td>Needs to talk through new learning</td>
+                    <td>Remembers what they see </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Puts information in visual forms </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Notices details</td>
+                    <td></td>
+                  </tr>
+                  <tbody></table>
+                </div>
+
+              </div>
+            </main>
+
+            <footer>
+              <p>&copy; EUROCONTROL</p>
+            </footer>
+            <script src="https://trainingzone.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+            <script type="module" src="./main.js"></script>
+            {% scrollToTop %}
+            <script src="print.min.js"></script>
+          </body>
+        </html>

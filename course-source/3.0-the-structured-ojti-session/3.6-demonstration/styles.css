@@ -1,0 +1,127 @@
+.oj-hero {
+  background-image: url(images/hero.jpg);
+  margin-bottom: 0;
+  border-bottom: 0;
+  margin-top: 0;
+  border-bottom: 1rem solid var(--oj-light-blue);
+  background-position: 50% 20%;
+}
+
+.oj-lowlight {
+  background-color: var(--oj-light-blue);
+}
+
+.oj-quote {
+  background-color: var(--oj-light-blue);
+  color: var(--oj-blue);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.oj-quote > div {
+  margin: 0 auto;
+}
+
+.oj-quote > div blockquote {
+  font-size: 2rem;
+  margin-top: 0;
+  border-left-width: 10px;
+}
+
+.oj-what-why p {
+  position: relative;
+  background-color: var(--oj-light-blue);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.oj-what-why p::before {
+  content: "WHAT";
+  display: inline-block;
+  background-color: var(--oj-blue);
+  color: var(--oj-light-blue);
+  padding: 1rem 1.5rem;
+  margin-left: -1rem;
+  margin-top: -3rem;
+  font-weight: bold;
+}
+
+.oj-what-why p:nth-child(2)::before {
+  content: "WHY";
+}
+
+.oj-what-why p:nth-child(3)::before {
+  content: "INFO";
+}
+
+.oj-what-why p:nth-child(4)::before {
+  content: "USE";
+}
+
+.oj-question {
+  position: relative;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 10px solid var(--oj-light-blue);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ians-grid-3.oj-question {
+  grid-column-gap: 1.5rem;
+}
+
+@media screen and (min-width: 720px) {
+  .oj-question::before,
+  .oj-question::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    top: 10%;
+    left: 32.5%;
+    background-color: #eaeaea;
+  }
+
+  .oj-question::after {
+    left: 65.5%;
+  }
+}
+
+div[class^="ians-video"] {
+  margin-bottom: 0rem;
+}
+
+.oj-example-title {
+  display: inline-block;
+  color: var(--oj-dark-blue);
+  background-color: var(--oj-light-blue);
+  font-size: small;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.oj-example-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border: 2px solid var(--oj-light-blue);
+}
+
+#ojExample01 {
+  background-image: url("images/example-01.jpg");
+}
+
+#ojExample02 {
+  background-image: url("images/example-02.jpg");
+}
+
+.ians-grid-2.oj-example {
+  grid-column-gap: 2rem;
+}

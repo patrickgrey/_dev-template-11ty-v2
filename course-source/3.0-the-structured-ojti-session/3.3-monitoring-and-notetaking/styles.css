@@ -1,0 +1,332 @@
+.oj-hero {
+  background-image: url("images/hero.jpg");
+}
+
+.oj-quote {
+  background-color: var(--oj-blue);
+  color: var(--oj-light-blue);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.oj-quote > div {
+  margin: 0 auto;
+}
+
+.oj-quote > div blockquote {
+  font-size: 2rem;
+  margin-top: 0;
+  border-left-width: 10px;
+}
+
+.oj-quote > div figcaption {
+  text-align: right;
+  font-size: 1rem;
+}
+
+.oj-objective {
+  margin-top: 3rem;
+}
+
+.oj-objective p {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 3px solid var(--oj-blue);
+  border-top: 3px solid var(--oj-blue);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.oj-giving-instruction-container {
+  position: relative;
+  border-bottom: 10px solid var(--oj-light-blue);
+}
+
+.oj-giving-instruction-text {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: hsla(var(--oj-dark-blue-value), 1);
+  color: white;
+  backdrop-filter: blur(10px);
+  /* border-top: 10px solid var(--oj-light-blue); */
+}
+
+.oj-giving-instruction-text strong {
+  color: white;
+}
+
+@media screen and (min-width: 720px) {
+  .oj-giving-instruction-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(var(--oj-dark-blue-value), 0.7);
+  }
+}
+
+.oj-giving-instruction-text p {
+  margin: 1rem auto;
+}
+
+/* QUESTION */
+.oj-answer-reveal {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.oj-answer-reveal.oj-answer-reveal-show {
+  animation: fadeIn 0.3s;
+  display: block;
+}
+
+#showAnswerButton {
+  margin-top: 3rem;
+}
+
+.oj-answer-button-container {
+  text-align: right;
+}
+
+.oj-question {
+  /* padding-bottom: 1rem; */
+  border-top: 1px solid var(--oj-light-blue);
+
+  box-shadow: 0px 10px 0px 0px white, 0px 20px 0px 0px var(--oj-light-blue);
+}
+/* QUESTION END */
+
+.oj-to-photo {
+  border: 1px solid var(--oj-light-blue);
+}
+
+/* TABS */
+.atabs {
+  border: 0;
+}
+
+.atabs h3 {
+  margin-top: 0;
+  color: var(--oj-blue);
+}
+
+.atabs__list {
+  border: 0;
+}
+
+.atabs__list:not([aria-orientation="vertical"]) {
+  border: 0;
+}
+
+.atabs__list__tab {
+  background-color: var(--oj-blue);
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border-bottom: 0;
+  --notchSize: 10px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notchSize)) 0,
+    calc(100% - 1px) var(--notchSize),
+    calc(100% - 1px) 100%,
+    0 100%
+  );
+}
+
+.atabs__list__tab:active,
+.atabs__list__tab:hover,
+.atabs__list__tab:focus {
+  background: var(--oj-light-blue);
+  color: var(--oj-blue);
+  box-shadow: inset 0 -3px 0 0 var(--oj-blue);
+}
+
+.atabs__list__tab:active,
+.atabs__list__tab:hover,
+.atabs__list__tab:focus {
+  outline: 0;
+}
+
+.atabs__list__tab[aria-selected="true"]:hover,
+.atabs__list__tab[aria-selected="true"]:focus {
+  box-shadow: inset 0 -3px 0 0 #eee;
+}
+
+.atabs__list__tab[aria-selected="true"] {
+  border-bottom: 0;
+  background-color: #eee;
+  color: var(--oj-blue);
+}
+
+.atabs__panel {
+  background-color: #eee;
+  border: 0;
+  --notchSize: 10px;
+  clip-path: polygon(
+    100% -1px,
+    100% calc(100% - var(--notchSize)),
+    calc(100% - var(--notchSize)) 100%,
+    -1px 100%,
+    -1px -1px
+  );
+  border-bottom: 5px solid var(--oj-light-blue);
+}
+
+/* TABS END */
+
+/* TAB CONTENT */
+.oj-monitor-panel-centre {
+  margin: 0 auto;
+  max-width: var(--column-max-width);
+}
+
+.oj-monitor-panel-text {
+  background-color: var(--oj-light-blue);
+  padding: 1rem;
+  margin-top: 0;
+}
+
+.ians-grid-2.ians-grid-2-oj-wide {
+  grid-column-gap: 2rem;
+}
+
+.oj-monitor-panel-photo {
+  border: 5px solid var(--oj-light-blue);
+  margin: 0 auto;
+  max-height: 50vh;
+  width: auto;
+}
+/* TAB CONTENT END */
+
+/* NOTES */
+
+.oj-hero-notes {
+  background-image: url(./images/notetaking.jpg);
+}
+
+.oj-notes-container {
+  padding: 1rem;
+  /* padding-bottom: 2rem; */
+}
+
+.oj-notes-container > div {
+  /* max-width: var(--column-max-width); */
+
+  margin: 0 auto 3rem auto;
+  background-color: var(--oj-light-blue);
+  padding: 0 1rem 1rem 1rem;
+}
+
+.oj-notes-container > div h3 {
+  text-align: center;
+  margin-top: 0rem;
+  padding-top: 1rem;
+}
+
+.oj-notes-container > div > p {
+  margin: 0 auto 1rem auto;
+}
+
+.oj-note-container {
+  overflow-x: auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+}
+
+.oj-note {
+  min-width: 710px;
+  font-family: "Caveat", cursive;
+  background-color: white;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 32px,
+    rgba(255, 177, 177, 0.3) 32px,
+    rgba(255, 177, 177, 0.3) 34px
+  );
+  border-top: 1rem solid white;
+  padding: 0 2rem 1rem 2rem;
+  position: relative;
+}
+
+.oj-note p {
+  font-size: 1.6rem;
+  line-height: 2.18rem;
+  margin: 0;
+  color: #999;
+}
+
+.oj-note-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+}
+
+.oj-t-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  border-top: 3px solid var(--ians-colour-blue-mid);
+  margin-top: 1rem;
+  /* padding-top: 1rem; */
+}
+
+.oj-t-container > div:nth-child(2) {
+  border-left: 3px solid var(--ians-colour-blue-mid);
+  padding-left: 1rem;
+}
+
+.oj-note-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+  padding-top: 1rem;
+}
+
+.oj-note-timeline {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+}
+
+.oj-note-timeline > div:first-child {
+  border-right: 3px solid var(--ians-colour-blue-mid);
+}
+
+.oj-note-timeline > div:nth-child(2) p {
+  padding-left: 1rem;
+}
+
+.oj-note-timeline-bb {
+  border-bottom: 3px solid var(--ians-colour-blue-mid);
+}
+
+.oj-long-hand p {
+  border: 2px solid #ccc;
+  border-bottom: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 2rem;
+  padding-bottom: 1px;
+}
+
+.oj-long-hand p:last-child {
+  border-bottom: thin solid #666;
+}

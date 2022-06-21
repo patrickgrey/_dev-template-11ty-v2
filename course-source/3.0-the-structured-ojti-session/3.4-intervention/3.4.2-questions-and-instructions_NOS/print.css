@@ -1,0 +1,75 @@
+:root {
+  --oj-interventions-types-icon-size: 3rem;
+  --shadow-color: 194deg 28% 46%;
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+/* TOOLBOX */
+
+.a2-toolbox-container {
+  max-height: none;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid var(--oj-light-blue);
+}
+
+/* @media print {
+  .a2-toolbox-container {
+    max-height: none;
+  }
+} */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+/* .a2-toolbox-container {
+  scrollbar-width: auto;
+  scrollbar-color: var(--oj-light-blue) white;
+} */
+
+/* Chrome, Edge, and Safari */
+/* .a2-toolbox-container::-webkit-scrollbar {
+  width: 23px;
+}
+
+.a2-toolbox-container::-webkit-scrollbar-track {
+  background: white;
+}
+
+.a2-toolbox-container::-webkit-scrollbar-thumb {
+  background-color: var(--oj-light-blue);
+  border-radius: 5px;
+} */
+
+/* Fixed Headers */
+
+.a2-toolbox {
+  border-right: 1px solid var(--oj-light-blue);
+}
+
+.a2-toolbox th {
+  padding: 1.5rem 0;
+  background-color: var(--oj-dark-blue);
+  color: white;
+  font-size: 1.3rem;
+  width: 25%;
+}
+
+.a2-toolbox tr:nth-child(even) {
+  background-color: hsla(var(--oj-light-blue-value), 0.3);
+}
+
+.a2-toolbox tr:nth-child(odd) {
+  /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.a2-toolbox thead tr:nth-child(odd) {
+  background-color: var(--oj-dark-blue);
+}
+
+.a2-toolbox td {
+  vertical-align: top;
+  padding: 1rem;
+}

@@ -16,6 +16,6 @@ Then call the function to add it to the page in your `main.js` file in the `modu
 
 ```javascript
 module.init = function () {
-	ScrollToTop();
+  //ScrollToTop();
 };
 ```

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 47">
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <line x1="79.14" y1="23.9" x2="81.47" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33"/>
+      <line x1="92.75" y1="23.9" x2="104.03" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33" stroke-dasharray="5.64 11.28"/>
+      <line x1="109.67" y1="23.9" x2="112" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33"/>
+    </g>
+    <g>
+      <line x1="2.14" y1="23.9" x2="4.47" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33"/>
+      <line x1="15.75" y1="23.9" x2="27.03" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33" stroke-dasharray="5.64 11.28"/>
+      <line x1="32.67" y1="23.9" x2="35" y2="23.9" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2.33"/>
+    </g>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <g>
+      <circle cx="57" cy="23.9" r="20.6" fill="none" stroke="#3ac5e5" stroke-miterlimit="10" stroke-width="3.89"/>
+      <circle cx="57" cy="23.9" r="12.44" fill="#fff"/>
+    </g>
+  </g>
+</svg>

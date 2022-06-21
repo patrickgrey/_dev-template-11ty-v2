@@ -1,0 +1,69 @@
+.oj-hero {
+  background-image: url("images/handover-hero.jpg");
+}
+
+.oj-lowlight {
+  background-color: var(--oj-light-blue);
+}
+
+.oj-two-questions {
+  display: grid;
+  grid-template-columns: 1fr var(--column-max-width) 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: white;
+}
+
+.oj-two-questions p {
+  padding: 1.5rem;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.oj-two-questions span {
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--oj-light-blue);
+  
+}
+
+.oj-two-questions p:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: var(--oj-blue);
+}
+.oj-two-questions p:nth-child(2) {
+  grid-area: 2 / 2 / 3 / 4;
+  background-color: var(--oj-dark-blue);
+}
+
+.oj-west p {
+  position: relative;
+  background-color: var(--oj-light-blue);
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.oj-west p::before {
+  content: "W";
+  display: inline-block;
+  background-color: var(--oj-blue);
+  color: var(--oj-light-blue);
+  padding: 1rem 1.5rem;
+  margin-left: -1rem;
+  margin-top: -3rem;
+  font-weight: bold;
+}
+
+.oj-west p:nth-child(2)::before {
+  content: "E";
+}
+
+.oj-west p:nth-child(3)::before {
+  content: "S";
+}
+
+.oj-west p:nth-child(4)::before {
+  content: "T";
+}

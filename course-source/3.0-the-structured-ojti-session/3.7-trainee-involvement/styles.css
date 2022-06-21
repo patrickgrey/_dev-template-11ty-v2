@@ -1,0 +1,201 @@
+.oj-hero {
+  background-image: url(images/hero.jpg);
+  background-position: 50% 50%;
+  margin-bottom: 0;
+  border-bottom: 0;
+  margin-top: 0;
+  border-bottom: 1rem solid var(--oj-light-blue);
+}
+
+.oj-lowlight {
+  background-color: var(--oj-light-blue);
+  margin-bottom: 3rem;
+}
+
+.oj-image-hero {
+  max-height: 50vh;
+  width: auto;
+}
+
+.oj-list-blocks {
+  counter-reset: list-blocks;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.oj-list-blocks li {
+  /* font-size: 1.3rem; */
+  /* font-weight: bold; */
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.oj-list-blocks li:nth-child(odd) {
+  background-color: var(--oj-light-blue);
+}
+
+@media screen and (min-width: 720px) {
+  .oj-list-blocks li {
+    margin-bottom: 0;
+  }
+
+  .oj-list-blocks li:nth-child(3) {
+    background-color: var(--oj-light-blue);
+  }
+
+  .oj-list-blocks li:nth-child(4) {
+    background-color: #eee;
+  }
+}
+
+.oj-list-blocks li::before {
+  counter-increment: list-blocks;
+  content: counter(list-blocks);
+  line-height: 1.5rem;
+  background-color: white;
+  /* width: 1.5rem; */
+  /* text-align: center; */
+  font-weight: bold;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--ians-colour-blue-mid);
+}
+
+blockquote {
+  font-size: 1.5rem;
+  margin-top: 0;
+  border-left-width: 10px;
+  background-color: var(--oj-light-blue);
+  padding: 2rem;
+  color: var(--oj-blue);
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  height: 100%;
+  /* background-color: #eee; */
+  padding: 1px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box.flip-box-turn .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  padding: 0.5rem;
+}
+
+.flip-box-front img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* @media (min-width: 1050px) {
+  .flip-box-front {
+    display: flex;
+    align-items: center;
+  }
+
+  .flip-box-front img {
+    width: 100%;
+    height: auto;
+  }
+} */
+
+.flip-box-back {
+  position: relative;
+  padding: 1rem;
+}
+
+.flip-box-back h3 {
+  margin-top: 0.5rem;
+}
+
+/* Style the back side */
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.oj-image-flip {
+  max-height: 50vh;
+}
+
+.oj-image-discuss {
+  max-height: 50vh;
+  width: auto;
+  margin: 2rem auto;
+}
+
+.ians-grid-2.oj-involvement-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ians-grid-2.oj-involvement-container div[class^="ians-video"] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 720px) {
+  .ians-grid-2.oj-involvement-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ians-grid-2.oj-involvement-container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    padding: 2rem;
+  }
+
+  .ians-grid-2.oj-involvement-container p:first-child {
+    margin-top: 1rem;
+  }
+
+  .ians-grid-2.oj-involvement-container div[class^="ians-video"] {
+    margin-top: 1rem;
+  }
+}
+
+.oj-traffic-first {
+  background-color: #9c0e0e;
+}
+
+.oj-traffic-first p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  color: white;
+}

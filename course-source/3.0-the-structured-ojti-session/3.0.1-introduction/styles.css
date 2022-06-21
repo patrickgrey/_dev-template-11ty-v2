@@ -1,0 +1,81 @@
+:root {
+  --oj-profile-radius: 1rem;
+}
+
+.oj-hero {
+  background-image: url("images/hero.jpg");
+  margin-top: 2rem;
+}
+
+.oj-count {
+  counter-reset: li-count;
+  list-style: none;
+  margin-top: 2rem;
+  display: block;
+}
+
+.oj-count li {
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 5rem;
+  font-weight: bold;
+  counter-increment: li-count;
+  list-style: none;
+  line-height: 4rem;
+}
+
+.oj-count li::after {
+  content: counter(li-count);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--oj-light-blue);
+  font-weight: bold;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.oj-profile {
+  padding: 0;
+  grid-column-gap: 1rem;
+}
+
+.oj-profile > div {
+  color: white;
+  background-color: var(--oj-dark-blue);
+  border-bottom-left-radius: var(--oj-profile-radius);
+  border-bottom-right-radius: var(--oj-profile-radius);
+}
+
+.oj-profile .oj-profile-img-container {
+  position: relative;
+}
+
+.oj-profile .oj-profile-img-container h2 {
+  position: absolute;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  bottom: 0;
+  left: 0;
+  background-color: var(--oj-light-blue);
+  color: var(--oj-dark-blue);
+}
+
+.oj-profile p {
+  padding: 1rem;
+}
+
+.oj-lets-see {
+  text-align: center;
+  /* border: 3px solid var(--oj-pink); */
+  background-color: var(--oj-light-blue);
+  padding: 0.5rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}

@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /*  
 
 .##.....##....###....########...######.
@@ -605,7 +601,7 @@ div[class^="ians-video"] embed {
 
 */
 
-@screen md {
+@media screen and (min-width: 720px) {
   h1 {
     font-size: var(--size-500);
     line-height: var(--size-500);
@@ -729,7 +725,7 @@ div[class^="ians-video"] embed {
 
  */
 
-@screen lg {
+@media screen and (min-width: 1024px) {
   /* ..######...#######..########..########
 	/* .##....##.##.....##.##.....##.##......
 	/* .##.......##.....##.##.....##.##......

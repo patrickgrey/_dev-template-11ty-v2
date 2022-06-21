@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>What does it mean to be competent?</title>
+    {% coreStyles %}
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body class="relative">
+    {% lmsBanner %}
+    <header class="ians-column-wide-1">
+      <p class="ians-breadcrumb">
+				The Training Organisation&nbsp;
+				<img
+					class="oj-header-chain"
+					src="images/icon-chain.svg"
+					alt="chain link icon"
+				/>
+      </p>
+      <h1>What does it mean to be competent?</h1>
+      <!--  -->
+    </header>
+    <main>
+
+      <div class="ians-column">
+        <p>
+					You are studying to become an ATC on-the-job training instructor, so
+					in the future it will be your job to train student ATCOs and, in some
+					instances, already qualified ATCOs to perform competently in either an
+					aerodrome, approach or an area environment. It is worth taking some
+					time to think about the following question:
+				</p>
+      </div>
+
+      <div class="mt-12">
+
+        <div class="oj-full-width-question">
+          <div class="ians-column-wide-3">
+            <p>
+              <strong>What does it mean when we say that an ATCO is competent?</strong>
+            </p>
+          </div>
+        </div>
+        <div class="oj-hero"></div>
+      </div>
+
+      <div class="ians-column-wide-4 ians-grid-2 oj-quote-pull mt-12">
+
+        <p>
+					As training pedagogy and <strong>methods have evolved</strong>, the aviation industry
+					has recognised that one of the most <strong>effective</strong> ways to train people who
+					work in dynamic environments is to use a <strong>competency-based approach</strong>.
+					This approach is particularly relevant when the job includes having to
+					deal with <strong>contexts and conditions</strong> that <strong>change often</strong>, for example
+					changing weather conditions, traffic density, airspace configurations,
+					flight crew complying or not complying with instructions and so on.
+				</p>
+
+        {# <p class="oj-dev-notes">Pull blockquote out to side. Doesn't have to be fully out. grid * 2 - smaller on quote side -  with bg colour for blockquote.</p> #}
+
+        <div class="oj-quote-pull-blockquote">
+
+          <div class="oj-notched">
+            <p>
+              <strong>This is the ICAO definition of competency:</strong>
+            </p>
+
+            <blockquote>
+					“A dimension of human performance that is used to reliably predict
+					successful performance on the job. A competency is manifested and
+					observed through behaviours that mobilize the relevant knowledge,
+					skills and attitudes to carry out activities or tasks under specified
+					conditions.”
+				</blockquote>
+
+            <cite>ICAO Doc. 9868 PANS Training.</cite>
+          </div>
+
+        </div>
+
+        <p>
+					In the following video, we are going to explore this idea of
+					competency and competency-based training and assessment of ATCOs a bit
+					further. Bear in mind that at the moment we are looking at <strong>ATCO competence</strong>, but later in the course we will look at <strong>OJTI performance</strong>
+					and the competencies needed to be an effective practical instructor.
+				</p>
+
+      </div>
+
+      <div class="ians-column-wide-3  oj-bracket-video">{% vimeo "601767386" %}
+      </div>
+
+      <div class="ians-column-wide-3 oj-bracket">
+        <div class="ians-column">
+
+          {# <p class="oj-dev-notes">Full width grid 3*3 with image bg. Try to get a rotated bracket shape to link video with grid. Details list below feeding grid. Each unit as a film segment.</p> #}
+
+          <p class="">
+					There are a number of general principles that are discussed in the
+					video. 
+          {# Click on each item below to get a better understanding of each
+					principle. #}</p>
+        </div>
+      </div>
+
+      <div class="oj-filmstrips-container">
+        <ol class="oj-filmstrips ians-grid-3 ians-column-wide-3">
+          <li>
+
+            {% image "images/video-ss-01.png", "Graphic showing specific OBs relevant to unit.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <div class="oj-filmstrip-bottom">
+              <p>
+                <strong>Competences are relevant for the specific role</strong>
+              </p>
+              <p>
+							This is why it is important that careful consideration is given to
+							the competency model criteria that are developed for each specific
+							environment.
+						</p>
+            </div>
+          </li>
+          <li>
+            {% image "images/video-ss-02.png", "OJTI pointing to a radar screen.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong
+  							>There is an explicit link between the competencies and what is
+  							trained and assessed</strong
+  						>
+            </p>
+            <p>
+							The design of the training course should be based on the required
+							competencies and a trainee should not be expected to demonstrate
+							competencies that are not in the competency model.
+						</p>
+          </li>
+          <li>
+            {% image "images/video-ss-03.png", "Controller in a dynamic context.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong>Competences can be applied in dynamic contexts</strong>
+            </p>
+            <p>
+							This means that once the ATCO has demonstrated competence, they
+							should be able to use those competencies in different situations,
+							such as changing weather, traffic, degraded systems, etc.
+						</p>
+          </li>
+          <li>
+            {% image "images/video-ss-04.png", "Task specific instructions.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <div class="oj-filmstrip-bottom">
+              <p>
+                <strong
+  							>Tasks (KSA) are the vehicle for observing competencies</strong
+  						>
+              </p>
+              <p>
+							With a competency-based approach, the performance of tasks is
+							still very important, however they are considered as the building
+							blocks to competent performance which requires that these tasks be
+							performed while at the same time demonstrating things like
+							situational awareness, effective communication, workload
+							management, teamwork and so on.
+						</p>
+            </div>
+          </li>
+          <li>
+            {% image "images/video-ss-05.png", "Assessors with a common understanding.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong
+  							>Instructors, trainees and assessors have a common understanding
+  							of the performance requirements and criteria</strong
+  						>
+            </p>
+            <p>
+							All actors in the training environment must have transparent
+							access to the performance requirements.
+						</p>
+          </li>
+          <li>
+            {% image "images/video-ss-06.png", "Diagram showing reliable assessment when competency based.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong
+  							>Evidence of competent performance is valid and reliable</strong
+  						>
+            </p>
+            <p>
+							Valid in that the performance is measured against the criteria in
+							the competency model and reliable in that different instructors
+							who view the same performance will make the same evaluation.
+						</p>
+          </li>
+          <li>
+            {% image "images/video-ss-07.jpg", "Screenshot from video showing OJTIs giving conflicting advice.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <div class="oj-filmstrip-bottom">
+              <p>
+                <strong
+  							>Instructors and assessors have a high inter-rater
+  							reliability</strong
+  						>
+              </p>
+              <p>
+							Exercises/workshops to ensure that instructors and assessors
+							understand the criteria in the same way is vital to ensuring
+							inter-rater reliability.
+						</p>
+            </div>
+          </li>
+          <li>
+            {% image "images/video-ss-08.jpg", "Multiple observers.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong>Multiple observations/multiple contexts</strong>
+            </p>
+            <p>
+							To ensure that a trainee will reliably and consistently perform to
+							the required standard, multiple observations should be made across
+							a wide variety of context before declaring that the trainee is
+							competent.
+						</p>
+          </li>
+          <li>
+            {% image "images/video-ss-09.jpg", "Diagram showing what competence is.",
+				"oj-filmstrip-ss", null, [320, 640, 700] %}
+            <p>
+              <strong>Integrated performance</strong>
+            </p>
+            <p>
+							To be considered competent a person must demonstrate an integrated
+							performance of all the required competencies to the required
+							standard.
+						</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="ians-column">
+
+        <p>
+					As I am sure you have realised, making sure that a training programme
+					is competency-based is primarily the responsibility of the training
+					designers. However, there are some principles that are very much the
+					responsibility of the instructors and assessors. 
+          
+          <strong class="oj-strong-highlight">One of the most	important principles is that instructors have a common understanding of the performance criteria and requirements.</strong>
+        </p>
+
+        {# <p class="oj-dev-notes">"One of the most
+					important principles is that instructors have a common understanding
+					of the performance criteria and requirements." Highlighted with graphic of instructors all around common perf criteria and reqs.</p> #}
+
+        <p>
+					What this means in practice is that instructors must have a 
+          <strong>common	understanding</strong> of how to interpret a performance <strong>in relation to</strong> the
+					competencies, the procedures and what the trainee does. Take a look at
+					the following example:
+				</p>
+
+      </div>
+
+      <div class="ians-bg-blue-dark oj-example-container">
+        <div class="ians-column mb-0 oj-example-intro">
+          <p class="mb-0">
+  					A fictitious area control centre called Coach ACC [Coach Radar], uses
+  					a competency model to determine if trainees are competent.
+  				</p>
+        </div>
+        <div class="ians-column-wide-3 ians-grid-2 mt-12">
+          <div>
+            {% image "images/area-control.jpg", "Area control",
+            "oj-img-area-control", null, [320, 640, 706] %}
+          </div>
+
+          <div class="oj-example-text">
+            <p class="mt-0">
+            Under the competence for ‘Traffic and Capacity Management’, one of the observable behaviours is: <strong>Manages traffic using prescribed procedures</strong>.
+            </p>
+            <p>
+            Note: Don’t worry about the rest of the model for now as we will discuss models later.
+            </p>
+            <p>
+            It then goes on further to say that the evidence the instructor is looking for, to be sure this observable behaviour is being demonstrated is: <strong>Climbs are initiated as per Local Operating Procedure after aircraft passes the entry points</strong>.
+            </p>
+            <p>
+            The Coach ACC Local Operating Procedure Manual says that: <strong>
+					  Aircraft at FL240 inbound to Coach ACC must be climbed at, or passing,
+  					the entry point to the Coach airspace at the earliest, and no later
+  					than 15NM past the entry point</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="ians-column-wide-3 oj-example-question">
+          <p>
+  					Now, if Jon climbs the aircraft 1NM too early or too late, how is this interpreted and assessed by the instructors and the assessors? 
+            </p>
+
+        </div>
+      </div>
+
+      <div class="ians-column oj-bracket">
+        <p class="pt-4">Listen
+					to Jon’s instructors and the assessor explain<br/> how they would assess
+					Jon’s performance.</p>
+      </div>
+
+      <div class="ians-grid-5 oj-people-container">
+        <div class="oj-person-container oj-notched">
+          <h3>Peter <span>(OJTI)</span></h3>
+          {# <div> #}
+          {% image "images/audio-peter.jpg", "Peter.",
+  				"oj-audio-photo", null, [320, 640, 750] %}
+          {# </div> #}
+          <audio
+						class="oj-person-audio"
+						controls
+						src="audio/Peter-OJTI_normalized.mp3"
+					>
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+          <details class="oj-notched">
+            <summary>Transcript</summary>
+            <p>
+              <span>&#8220;</span>I think if there are no other aircraft in the
+							vicinity and Jon climbs the aircraft too early, it isn’t such a
+							big deal because the other sector would not have handed the
+							aircraft off if there was a conflict. But it would be a problem if
+							he didn’t climb the aircraft by the time it gets to 15NM because
+							he could be blocking a level.<span>&#8221;</span>
+            </p>
+          </details>
+        </div>
+
+        <div class="oj-person-container oj-notched">
+          <h3>Dragan <span>(OJTI)</span></h3>
+          {% image "images/audio-dragan.jpg", "dragan.",
+				"oj-audio-photo" %}
+          <audio
+						class="oj-person-audio"
+						controls
+						src="audio/Dragan-OJTI_normalized.mp3"
+					>
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+          <details class="oj-notched">
+            <summary>Transcript</summary>
+            <p>
+              <span>&#8220;</span>I’d look at the traffic situation and if the
+							climb was too early or too late but still safe, then I wouldn’t be
+							too worried. It’s more important that Jon learns to become
+							situationally aware than to blindly follow a procedure.<span
+								>&#8221;</span
+							>
+            </p>
+          </details>
+        </div>
+
+        <div class="oj-person-container oj-notched">
+          <h3>Olex <span>(OJTI)</span></h3>
+          {% image "images/audio-oleks.jpg", "oleks.",
+				"oj-audio-photo" %}
+          <audio
+						class="oj-person-audio"
+						controls
+						src="audio/Olex-OJTI_normalized.mp3"
+					>
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+          <details class="oj-notched">
+            <summary>Transcript</summary>
+            <p>
+              <span>&#8220;</span>I think you can apply a bit of leeway, 1NM
+							early or late is OK but 5NM isn’t.<span>&#8221;</span>
+            </p>
+          </details>
+        </div>
+
+        <div class="oj-person-container oj-notched">
+          <h3>Nadine <span>(OJTI)</span></h3>
+          {% image "images/audio-nadine.jpg", "nadine.",
+				"oj-audio-photo", null, [320, 640, 750] %}
+          <audio
+						class="oj-person-audio"
+						controls
+						src="audio/Nadine-OJTI_normalized.mp3"
+					>
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+          <details class="oj-notched">
+            <summary>Transcript</summary>
+            <p>
+              <span>&#8220;</span>It depends on how many times he does it. Once
+							or twice in a shift is OK, but more than that and I would be
+							wondering if he knows what is written in the procedure.<span
+								>&#8221;</span
+							>
+            </p>
+          </details>
+        </div>
+
+        <div class="oj-person-container oj-notched">
+          <h3>Ashley <span>(Assessor)</span></h3>
+          {% image "images/audio-ashley.jpg", "ashley.",
+				"oj-audio-photo", null, [320, 640, 750] %}
+          <audio
+						class="oj-person-audio"
+						controls
+						src="audio/ashley-assessor_normalized.mp3"
+					>
+						Your browser does not support the
+						<code>audio</code> element.
+					</audio>
+          <details class="oj-notched">
+            <summary>Transcript</summary>
+            <p>
+              <span>&#8220;</span>The LOP clearly says no earlier than the entry
+							point and no later than 15NM, so it doesn’t matter if he is one or
+							20 miles too late or early – he still isn’t following the
+							procedure, so I would mark him down.<span>&#8221;</span>
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div class="ians-column">
+        <!-- <p>
+					Peter (OJTI) – ‘I think if there are no other aircraft in the vicinity
+					and Jon climbs the aircraft too early, it isn’t such a big deal
+					because the other sector would not have handed the aircraft off if
+					there was a conflict. But it would be a problem if he didn’t climb the
+					aircraft by the time it gets to 15NM because he could be blocking a
+					level.’
+				</p>
+
+				<p>
+					Dragan (OJTI) – ‘I’d look at the traffic situation and if the climb
+					was too early or too late but still safe, then I wouldn’t be too
+					worried. It’s more important that Jon learns to become situationally
+					aware than to blindly follow a procedure.’
+				</p>
+
+				<p>
+					Olex (OJTI) – ‘I think you can apply a bit of leeway, 1NM early or
+					late is OK but 5NM isn’t’
+				</p>
+
+				<p>
+					Nadine (OJTI) – ‘It depends on how many times he does it. Once or
+					twice in a shift is OK, but more than that and I would be wondering if
+					he knows what is written in the procedure.’
+				</p>
+
+				<p>
+					Ashley (Assessor) - ‘The LOP clearly says no earlier than the entry
+					point and no later than 15NM, so it doesn’t matter if he is one or 20
+					miles too late or early – he still isn’t following the procedure, so I
+					would mark him down.’
+				</p> -->
+
+        {# <p class="oj-dev-notes">Warning icon with yellow rounded border round paragraph - as with alarm in ACDM.</p> #}
+
+        <p>
+					Clearly, from the above example, it would not be in the interests of
+					anyone if the instructors have trained Jon to do one thing (or in our
+					example, many different things!) while the assessor/s will evaluate to
+					a different standard and declare Jon ‘not competent’.
+				</p>
+
+        <h2>Definitions and components of a competency model</h2>
+
+        {# <p class="oj-dev-notes">Quick diagram - layout? - List of the word competency then =? (? above?) the list of performance - against each row is ticks, 1-4.</p> #}
+
+        <p>
+					As an instructor, you make use of a competency model to evaluate the
+					performance of your trainee relative to the standard that they are
+					required to achieve, to be declared competent. This evaluation helps
+					you and the trainee to understand which areas of performance are
+					<strong>strong</strong> and which ones <strong>require further work</strong>.
+				</p>
+
+        {# <p class="oj-dev-notes">Below: [Patrick – please remake the diagram. The definitions interactive could have some interactive element]. Should it not be "Competence" = Obs + cond + standards? Remake the diagram in HTML to include each definition. Text below and ul list in bgc block to group. Wide 3 inside full width bgc.</p> #}
+
+        <p>
+					A competency model contains a list of the required competences along
+					with their performance criteria, and is supported by an Evidence
+					Guide:
+				</p>
+
+        <p class="ians-text-instruction">
+                Select the pink buttons to learn more
+            </p>
+
+      </div>
+
+      <div class="ians-column-wide-4 mt-12 mb-12">
+        {# oj-comp-model oj-comp-model-evidence-container #}
+        <iframe src="https://trainingzone.h5p.com/content/1291534224220435437/embed" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+        <script src="https://trainingzone.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+
+        {# <div class="oj-comp-model-comp">
+          <div class="oj-comp-model-comp-inner">
+            <p>
+              <strong>Competence</strong>
+            </p>
+            <p>A single unit of competency.</p>
+          </div>
+        </div>
+
+        <div class="oj-comp-model-perf-container">
+
+          <div class="oj-comp-model-ob">
+            <p>
+              <strong>Observable behaviour (OB)</strong>
+            </p>
+            <p>A single role-related	behaviour that can be observed and may or may not be measurable.</p>
+          </div>
+
+          <div class="oj-comp-model-cond">
+            <p>
+              <strong>Conditions </strong>
+            </p>
+            <p>Anything that may qualify a specific						environment in which performance will be demonstrated. Examples of						conditions are things like traffic density and complexity, changing						weather, degraded systems, the amount of support the trainee gets.</p>
+          </div>
+
+          <div class="oj-comp-model-stand">
+            <p>
+              <strong>Standard (Competency standard)</strong>
+            </p>
+            <p>A level of						performance that is defined as acceptable when assessing whether or						not competency has been achieved.</p>
+          </div>
+
+          <div class="oj-comp-model-perf">
+            <p>
+              <strong>Performance criteria</strong>
+            </p>
+            <p>Statements used to assess	whether the required levels of performance have been achieved for a		competency. A performance criterion consists of an observable	behaviour, condition(s) and a competency standard.</p>
+          </div>
+
+        </div>
+
+        <div class="oj-comp-model-evidence">
+          <p>
+            <strong>Evidence Guide</strong>
+          </p>
+          <p>Descriptions of how the observable						behaviours are ‘evidenced’ at a particular working station, sector						or tower environment.</p>
+        </div> #}
+
+      </div>
+
+      <div class="ians-column">
+
+        <p>
+					Let’s have a look at an example from our fictitious Coach ACC Unit
+					Competence Scheme. In this example, only the
+					<strong>Traffic and Capacity Management</strong> competence is
+					elaborated. Bear in mind that in a complete model, all the competences
+					are elaborated.
+				</p>
+
+      </div>
+
+      <div class="oj-example-competence-container">
+        <div class="ians-column-wide-4 oj-example-competence">
+
+          {# <p class="oj-dev-notes">Layout the following as a paper form. Full width.</p> #}
+
+          <h2>
+            <span>Competency:</span> Traffic and Capacity Management</h2>
+
+          <h3>Description:</h3>
+          <p>Ensure a safe, orderly and efficient traffic flow and
+					provide essential information on environment and potentially hazardous
+					situations.
+				</p>
+
+          <div class="oj-example-grid-3">
+
+            <div>
+              <h3>OBs:</h3>
+              <ol>
+                <li>Manages traffic using the prescribed procedures</li>
+                <li>Issues clearance and instructions in a timely manner</li>
+                <li>Uses appropriate techniques to manage the traffic</li>
+              </ol>
+            </div>
+
+            <div>
+              <h3>Evidence Guide:</h3>
+
+              <ol>
+                <li>Achieves correct exit conditions</li>
+                <li>Climbs are initiated as per Local Operating Procedures after
+  						aircraft passes the entry point
+  					</li>
+                <li>Uses speed control, vectoring and climb/descend rates to manage
+  						traffic
+  					</li>
+                <li>Uses knowledge of aircraft performance to issue appropriate
+  						clearances and instructions
+  					</li>
+                <li>Clears flights via the shortest route to the filed exit point,
+  						traffic permitting
+  					</li>
+                <li>No aircraft radar target touches the military restricted airspace
+  						boundaries
+  					</li>
+              </ol>
+            </div>
+
+            <div>
+              <h3>Conditions:</h3>
+
+              <ul>
+                <li>
+  						With all levels of traffic up to the maximum sector capacities as
+  						listed in section XX of the Coach ACC Unit Local Operating
+  						Procedures Manual;
+  					</li>
+                <li>With all levels of traffic complexity;</li>
+                <li>With all sector configurations as described in section XX of the
+  						Coach ACC Unit Local Operating Procedures Manual;
+  					</li>
+                <li>Under all weather conditions;</li>
+                <li>Without assistance from an instructor; and</li>
+                <li>Using all the tools and systems described in the Coach ACC Unit
+  						Local Operating Procedures Manual.
+  					</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <h3>Standards:</h3>
+
+          <p>
+					The performance shall comply with the procedures, rules and
+					regulations described in the following documents:
+				</p>
+
+          <ul class="oj-example-docs">
+            <li>Coach ACC Unit Local Operating Procedures Manual</li>
+            <li>Letters of Agreement between Coach ACC and North ACC</li>
+            <li>National Manual of Air Traffic Services</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-12">
+      <p>&copy; EUROCONTROL</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+    {% scrollToTop %}
+  </body>
+</html>

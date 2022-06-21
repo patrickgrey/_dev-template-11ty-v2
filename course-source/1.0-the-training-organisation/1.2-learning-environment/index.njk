@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learning Environment</title>
+    {% coreStyles %}
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="print.css"/>
+  </head>
+
+  <body class="relative">
+    {% lmsBanner %}
+    <header class="ians-column-wide-1">
+      <p class="ians-breadcrumb">
+            The Training Organisation&nbsp;/
+            <img class="oj-header-chain" src="images/icon-chain.svg" alt="chain link icon"/>
+      </p>
+      <h1>Learning Environment Hiiiiiii</h1>
+    </header>
+    <main>
+      <div class="ians-column">
+        <h2 class="oj-pt0-important">The learning philosophy of your organisation</h2>
+        <p>
+                A learning philosophy is a statement or set of
+                <strong>statements</strong> that identify an organisations
+                <strong>beliefs</strong>, <strong>norms</strong> and
+                <strong>values</strong> regarding <strong>teaching</strong> and
+                <strong>learning</strong>. These statements influence how students are
+                taught, what behaviours are expected of instructors and trainees, and
+                more importantly the implicit and explicit values that the
+                organisation expresses with regard to learning.
+            </p>
+
+      </div>
+
+      <div class="oj-hero"></div>
+
+      <div class="ians-column">
+
+        <p>
+                Very few ANSPs have an explicit learning philosophy statement, this
+                does not however mean that they don’t have a learning philosophy that
+                has over the years become part of the instructing culture.
+            </p>
+
+        <p>
+                It could be very helpful to consider what philosophy
+                <strong>your own organisation</strong> has to learning. Complete the
+                following table to get a broad overview of what influences the
+                learning environment you work in (of course it is possible that your
+                ANSP sits somewhere in between the statements below):
+            </p>
+
+        <p class="ians-text-instruction">
+                Answer the questions below. Use the notes text boxes below questions
+                to record any useful thoughts you have when considering the questions.
+                Your answers should be saved to your device for future visits to this
+                page. You can print out your answers to keep for later reference or forward to others in your organisation. Select the button below to clear your
+                saved data.
+            </p>
+
+        <button id="clearAllMemory">Clear saved answers</button>
+        <button id="printAnswers" >Print my answers</button>
+
+      </div>
+      <div class="oj-questions" id="ojQuestions">
+
+        <div class="ians-grid-2 oj-full-padding mt-12">
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>
+                            Which of the following statements best suits the approach the
+                            ANSP and OJTIs take towards the learning environment?
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q1a1" name="q1" value="q1a1"/>
+                  <label for="q1a1">When the student arrives at the unit, they have to first
+                                    prove that they are able to do the job before being accepted
+                                    as part of the team. As a result, the OJTIs uses their
+                                    pedagogical techniques to provide the training but the
+                                    relationship is very neutral and functional. No support is
+                                    provided to help the trainee adjust to the social aspect of
+                                    working at the unit. This can lead to a trainee feeling
+                                    excluded, but the belief is that this is one of the
+                                    challenges that the trainee has to overcome to be accepted.
+                                    Once they have proved themselves, they are included both at
+                                    work and in the social environment.</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q1a2" name="q1" value="q1a2"/>
+                  <label for="q1a2">When the student arrives at the unit, it is the job of the
+                                    entire team to help integrate the trainee into the social
+                                    and work environment. As a result, the OJTI uses pedagogical
+                                    techniques to provide the training but also focuses on
+                                    enabling the trainee to develop positive attitudes and
+                                    behaviours towards the team. The team helps by encouraging
+                                    and including the trainee in all aspects of work
+                                    life.</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q1notes" name="q1notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>The training at your unit is:</legend>
+              <ul class="flex flex-column  list-none">
+                <li>
+                  <input class="radio" type="radio" id="q2a1" name="q2" value="q2a1"/>
+                  <label for="q2a1">Instructor-led and trainee centred (i.e. the instructor
+                                    determines the pace and focus of the training but does so
+                                    from the perspective of what they believe the trainee
+                                    requires in order to achieve competence)</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q2a2" name="q2" value="q2a2"/>
+                  <label for="q2a2">Trainee-led and instructor facilitated (i.e. the trainee
+                                    assesses their own performance and training needs. The
+                                    instructor facilitates the needs of the trainee.)</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q2a3" name="q2" value="q2a3"/>
+                  <label for="q2a3">Equal partners (i.e. the instructor and trainee work
+                                    together to assess the performance and determine the next
+                                    steps and areas of focus in the training.)</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q2notes" name="q2notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>
+                            Which of the following statements best suits the approach the
+                            ANSP and OJTIs take towards the learning environment?
+                        </legend>
+              <ul class="flex flex-column  list-none">
+                <li>
+                  <input class="radio" type="radio" id="q3a1" name="q3" value="q3a1"/>
+                  <label for="q3a1">The instructors are the only personnel responsible for the
+                                    success of the trainee</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q3a2" name="q3" value="q3a2"/>
+                  <label for="q3a2">The trainee is the only person responsible for their own
+                                    success</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q3a3" name="q3" value="q3a3"/>
+                  <label for="q3a3">The entire training team is responsible for the success of
+                                    the trainee</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q3notes" name="q3notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>
+                            Which, if any, of the following people also support the trainee during their
+                            training:
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="checkbox" type="checkbox" id="q4a1" name="q4" value="q4a1"/>
+                  <label for="q4a1">Supervisors</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q4a2" name="q4" value="q4a2"/>
+                  <label for="q4a2">Training manager</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q4a3" name="q4" value="q4a3"/>
+                  <label for="q4a3">Educational specialists</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q4a4" name="q4" value="q4a4"/>
+                  <label for="q4a4">Peers</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q4notes" name="q4notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+        </div>
+        <div class="ians-grid-3 oj-full-padding mt-4">
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>
+                            Which, if any, of the following programmes have been put in place by my ANSP to
+                            support the trainee:
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="checkbox" type="checkbox" id="q5a1" name="q5" value="q5a1"/>
+                  <label for="q5a1">Stress and fatigue management programmes</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q5a2" name="q5" value="q5a2"/>
+                  <label for="q5a2">Resilience training</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q5a3" name="q5" value="q5a3"/>
+                  <label for="q5a3">Other</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q5notes" name="q5notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Your ANSP believes that trainees in the operational environment should be exposed to:
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q6a1" name="q6" value="q6a1"/>
+                  <label for="q6a1">as many OJTIs as possible</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q6a2" name="q6" value="q6a2"/>
+                  <label for="q6a2">a very limited number of OJTI</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q6notes" name="q6notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Which, if any, of the following do the OJTIs in your ANSP understand:</legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="checkbox" type="checkbox" id="q7a1" name="q7" value="q7a1"/>
+                  <label for="q7a1">their role in the success/failure of the trainee</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q7a2" name="q7" value="q7a2"/>
+                  <label for="q7a2">how their developmental biases may influence their instructing</label>
+                </li>
+                <li>
+                  <input class="checkbox" type="checkbox" id="q7a3" name="q7" value="q7a3"/>
+                  <label for="q7a3">the effect of a positive approach to the trainee </label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q7notes" name="q7notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+        </div>
+
+        <div class="ians-grid-4 oj-full-padding mt-4">
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Does your ANSP allow time to the OJTIs to prepare for their instructing sessions?
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q8a1" name="q8" value="q8a1"/>
+                  <label for="q8a1">Yes</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q8a2" name="q8" value="q8a2"/>
+                  <label for="q8a2">No</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q8notes" name="q8notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Does your ANSP provide any training to OJTIs help them deal with challenging training
+                            situations?</legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q9a1" name="q9" value="q9a1"/>
+                  <label for="q9a1">Yes</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q9a2" name="q9" value="q9a2"/>
+                  <label for="q9a2">No</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q9notes" name="q9notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Does your ANSP commit time and resources to ensuring that OJTIs harmonise their
+                            understanding of the competencies, the standards set and how to assess performances.
+                        </legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q10a1" name="q10" value="q10a1"/>
+                  <label for="q10a1">Yes</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q10a2" name="q10" value="q10a2"/>
+                  <label for="q10a2">No</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q10notes" name="q10notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <div class="oj-clearfix">
+              <legend>Do OJTIs in your ANSP believe that trainees learning through their mistakes and
+                            therefore it is okay to make mistakes while under training?</legend>
+              <ul class="flex flex-column list-none">
+                <li>
+                  <input class="radio" type="radio" id="q11a1" name="q11" value="q11a1"/>
+                  <label for="q11a1">Yes</label>
+                </li>
+                <li>
+                  <input class="radio" type="radio" id="q11a2" name="q11" value="q11a2"/>
+                  <label for="q11a2">No</label>
+                </li>
+              </ul>
+            </div>
+            <details>
+              <summary>Notes</summary>
+              <textarea id="q11notes" name="q11notes" rows="3"></textarea>
+            </details>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="ians-column">
+
+        <h2>Understanding your learner population</h2>
+
+        <p>For a student to thrive, it is essential that an environment and culture of <strong>openness and positivity</strong> towards <strong>learning and safety</strong> exists.  Learning will be more effective in an environment where everyone feels comfortable about discussing <strong>mistakes</strong>, as well as the <strong>quality</strong> of each other's work, without invoking <strong>blame</strong> or shame.</p>
+
+        <p>Imagine the detrimental consequences and effect on learning for everybody at an ATC Unit where people don't communicate or, more subtly, only communicate about certain things!</p>
+
+      </div>
+
+      <div class="oj-lowlight oj-hero oj-hero-head-in-hands"></div>
+
+      <div class="ians-column">
+
+        <p>As instructors, we play a vital part in encouraging and creating an optimal learning environment for your students.</p>
+
+        <p>This environment is created by the behaviours and attitudes of the people working there and it is vital that a <strong>culture</strong> exists where learning is actively encouraged and facilitated. </p>
+
+        <p>Unit management also plays a key role in the formation of the workplace culture. In a safe and positive environment, <strong>sharing and reporting</strong> of information about mistakes, incidents and occurrences is shared without fear. </p>
+
+        <p>In a positive environment the student is quickly made to feel a part of a team.</p>
+
+        <p>A poor workplace culture will <strong>prevent</strong> the students from asking the questions that will help them to learn.  They will feel reluctant to report their own and the mistakes of others.  This, in turn, will create a situation which will impact on safety and will ultimately create an air of <strong>learning stagnation</strong> at the unit.</p>
+
+        <p>In an ATC operational environment, there are many different circumstances where some form of training is
+                needed and likewise, the people who need this training may have very different <strong>learning profiles</strong>. Bear
+                in mind that each person brings with them a particular approach to learning and their expectations of
+                the support they will receive from the instructors.</p>
+      </div>
+
+      <div class="oj-profiles-grid-3 oj-profiles">
+
+        <div>
+
+          <div class="oj-profile-content">
+
+            <div class="oj-profile-header">
+              {% image "images/learner-anna.jpg", "Photo of Anna.",
+				"oj-profile-photo", null, [100] %}
+              <h3>Anna</h3>
+            </div>
+
+            <div class="oj-profile-data oj-profiles-grid-2 oj-notched">
+              <p>
+                <strong>Age:</strong><br/> 20 years</p>
+              <p>
+                <strong>Experience:</strong><br/> 6 months at the National ATC College.</p>
+            </div>
+            <p>For Anna, this is her first job. The ATC College she did her initial training at promotes group collaboration and inclusive interactions. She already believes she is part of the team.</p>
+            <p>She expects a lot of support from her OJTIs and is very willing to learn from their experience and that of the teams she is in.</p>
+            <p>She knows she has to both study and work hard but also expects the OJTI to be there to guide her performance and help her when she encounters difficulties, as she considers them as the experts.</p>
+          </div>
+        </div>
+
+        <div>
+
+          <div class="oj-profile-content">
+            <div class="oj-profile-header">
+              {% image "images/learner-belinda-2.jpg", "Photo of Belinda.",
+                    "oj-profile-photo", null, [100] %}
+              <h3>Belinda</h3>
+            </div>
+            <div class="oj-profile-data oj-profiles-grid-2 oj-notched">
+              <p>
+                <strong>Age</strong>: 24 years</p>
+              <p>
+                <strong>Experience</strong>: University degree in Aeronautics
+1 year at the ATC Academy of Beluga (a country somewhere outside of Europe)
+</p>
+            </div>
+            <p>For Belinda, this is also her first job. However, as a university student she learnt to be an independent learner.</p>
+
+            <p>She expects a bit of guidance from her OJTIs but knows that it is up to her to ask for additional practice if she thinks she needs it. She can identify her own weak areas and take action to correct them without necessarily waiting for the OJTI to brief her on what to do. </p>
+
+            <p>Her university also encouraged her to think critically. As a result she believes it is a positive part of her role, as a new trainee, to observe and suggest ‘improvements’ in anything from the way the training is being conducted, to procedures and regulatory requirements.</p>
+
+          </div>
+        </div>
+
+        <div>
+
+          <div class="oj-profile-content">
+            <div class="oj-profile-header">
+              {% image "images/learner-phillipe-2.jpg", "Photo of Phillipe.",
+                    "oj-profile-photo", null, [100] %}
+              <h3>Philippe</h3>
+            </div>
+            <div class="oj-profile-data oj-profiles-grid-2 oj-notched">
+              <p>
+                <strong>Age</strong>: 40 years</p>
+              <p>
+                <strong>Experience</strong>:  10 years as an ACS controller in a busy operational environment.
+5 years as an APS controller in a moderately busy TMA.
+</p>
+            </div>
+            <p>Philippe trained as an ATC at a time where he had prove his worth as a controller. This meant that he would always challenge the OJTIs evaluation and fought to defend his actions during training. </p>
+
+            <p>Now he is an experienced controller who is returning to the ACS environment. He believes that due to his experience, his OJTIs will act as facilitators as he figures out what he needs to do. As an experienced controller he is confident that he knows what he needs from the OJTI and will ask for information when necessary.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="ians-column mt-12">
+        <p>An instructor, who has an <strong>understanding of the learning environment</strong> that their trainees have <strong>come from</strong>, and has an adequate set of tools and techniques to work with, will be able to <strong>take advantage</strong> of the positive aspects of the trainees’ learning background. They will also be <strong>flexible</strong> enough to adapt their instructing style to help the trainee achieve the performance objectives they are required to demonstrate.</p>
+
+        <p>Trainees are <strong>not necessarily</strong> all <strong>young  or  new to the ATC environment</strong>. There are likely to be many occasions when the instructor will be training a more mature ATCO who may have moved from one sector or unit to another, or may be undertaking refresher training or remedial training. </p>
+
+        <p>While inter-generational factors have an influence on their interaction with their instructors, these learners are likely to <strong>bring with them</strong> the learning behaviours of the ATCO training environments to which they were previously exposed. This may include instructor-dominated practical teaching interactions and a heavy emphasis on assessment but could also include a high level of self-directed support learning.</p>
+
+        <p>When you are first considering your instructing <strong>approach with a new trainee</strong> it may be worth considering the following:</p>
+
+      </div>
+
+      <div class="ians-column-wide-1 oj-lowlight py-12 oj-bb-green oj-notched">
+        <div class="ians-column">
+          <ul class="list-disc list-inside">
+            <li>Is this an experienced ATCO or a new trainee?</li>
+            <li>What kind of learning environment is this trainee used to?</li>
+            <li>What role did the trainee play in their previous learning?</li>
+            <li>What was the role of the instructor?</li>
+            <li>What KSA does the trainee already have?</li>
+            <li>What is the trainee’s educational background?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ians-column">
+
+        <p>For a <strong>group of trainees</strong>, you may want to consider:</p>
+
+      </div>
+
+      <div class="ians-column-wide-1 oj-lowlight py-12  mb-12  oj-bb-green  oj-notched">
+        <div class="ians-column">
+
+          <ul class="list-disc list-inside">
+            <li>Where do the trainees come from (i.e. same country/many countries or different regions of same country)?</li>
+            <li>What is their age range?</li>
+          </ul>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; EUROCONTROL</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+    {% scrollToTop %}
+  </body>
+
+</html>

@@ -9,16 +9,6 @@ const CleanCSS = require("clean-css");
 const source = "course-source";
 const publish = "course-publish";
 
-function coreStyles() {
-  let code = fs.readFileSync(
-    `./${publish}/_shared/_styleguide/ians-styleguide.css`,
-    "utf8"
-  );
-  code += fs.readFileSync(`./${publish}/_shared/_shared.css`, "utf8");
-  const minified = new CleanCSS({}).minify(code).styles;
-  return minified;
-}
-
 async function imageShortcode(src, alt, cls, sizes, widths, formats) {
   const imagePath = path.dirname(src);
   const urlPath = imagePath + "/";
@@ -59,11 +49,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(`${source}/**/*.mp3`);
   eleventyConfig.addPassthroughCopy(`${source}/**/*.pdf`);
   // eleventyConfig.addPassthroughCopy(`${source}/**/*.css`);
-  eleventyConfig.addPassthroughCopy(`${source}/**/*.js`);
+  // eleventyConfig.addPassthroughCopy(`${source}/**/*.js`);
 
   // eleventyConfig.addWatchTarget(`./${source}/index.css`);
-  eleventyConfig.addWatchTarget(`${source}/**/*.css`);
-  eleventyConfig.addWatchTarget(`${source}/**/*.js`);
+  // eleventyConfig.addWatchTarget(`${source}/**/*.css`);
+  // eleventyConfig.addWatchTarget(`${source}/**/*.js`);
 
   // Add plugins
   // Not finding local dependencies
@@ -76,17 +66,36 @@ module.exports = function (eleventyConfig) {
 
   // https://github.com/matthiasott/eleventy-plus-vite 
   if (process.env.NODE_ENV === "development") {
-    eleventyConfig.addPlugin(EleventyVitePlugin, {
-      resolve: {
-        alias: [
-          { find: "_components", replacement: `/${source}/_shared/_components` }
-        ]
-      },
-    });
+    eleventyConfig.addPlugin(EleventyVitePlugin);
   }
 
+  function coreStyles() {
+    let code = "<style>";
+    let styleCode = fs.readFileSync(
+      `./${publish}/_shared/_styleguide/ians-styleguide.css`,
+      "utf8"
+    );
+    styleCode += fs.readFileSync(`./${publish}/_shared/_shared.css`, "utf8");
+    const minified = new CleanCSS({}).minify(styleCode).styles;
+    code += styleCode + "</style>"
+    return code;
+  }
+
+  function scrollToTop() {
+    let code = "<script>";
+    code += fs.readFileSync(
+      `./${source}/_shared/_components/ScrollToTop/indexNoModule.js`,
+      "utf8"
+    );
+    // code += "import { ScrollToTop } from 'ScrollToTop'";
+    code += "ScrollToTop()";
+    code += "</script>"
+    return code;
+  }
   // Add shortcodes
   eleventyConfig.addNunjucksShortcode("coreStyles", coreStyles);
+  eleventyConfig.addNunjucksShortcode("scrollToTop", scrollToTop);
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksShortcode("lmsBanner", function () {
     let html = ``;
     if (process.env.NODE_ENV === "development") {
@@ -126,10 +135,8 @@ module.exports = function (eleventyConfig) {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [
-      "md",
       "njk",
-      "html",
-      "liquid"
+      "html"
     ],
 
     // Pre-process *.md files with: (default: `liquid`)

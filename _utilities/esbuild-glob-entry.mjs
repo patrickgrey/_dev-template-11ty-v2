@@ -5,7 +5,7 @@ dotenv.config()
 
 const source = "course-source";
 const publish = "course-publish";
-const dev = process.env.NODE_ENV !== "production";
+// const dev = process.env.NODE_ENV !== "production";
 
 // https://github.com/igoradamenko/esbuild-plugin-alias
 (async () => {
@@ -15,10 +15,10 @@ const dev = process.env.NODE_ENV !== "production";
 
   await build({
     entryPoints,
-    nodePaths: [`${source}/_shared/`],
+    nodePaths: [`${source}/_shared/_components/`],
     bundle: true,
     minify: true,
     outdir: publish,
-    watch: dev
+    watch: false
   });
 })();

@@ -1,0 +1,131 @@
+.oj-hero {
+  background-image: url("images/hero.jpg");
+  margin-top: 0;
+}
+
+.oj-full-width-question {
+  background-color: var(--oj-light-blue);
+  /* margin-top: 3rem; */
+}
+
+.oj-full-width-question p {
+  color: var(--oj-blue);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 0;
+  /* text-shadow: 1px 1px 2px rgba(81, 133, 18, 0.9); */
+}
+
+.oj-list-blocks {
+  counter-reset: list-blocks;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.oj-list-blocks li {
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.oj-list-blocks li:nth-child(even) {
+  background-color: var(--oj-light-blue);
+}
+
+@media screen and (min-width: 720px) {
+  .oj-list-blocks li {
+    margin-bottom: 0;
+  }
+
+  .oj-list-blocks li:nth-child(3) {
+    background-color: var(--oj-light-blue);
+  }
+
+  .oj-list-blocks li:nth-child(4) {
+    background-color: #eee;
+  }
+}
+
+.oj-list-blocks li::before {
+  counter-increment: list-blocks;
+  content: counter(list-blocks);
+  line-height: 1.5rem;
+  background-color: white;
+  /* width: 1.5rem; */
+  /* text-align: center; */
+  font-weight: bold;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--ians-colour-blue-mid);
+}
+
+.oj-when-intervene li {
+  max-width: 100%;
+  background: #eaeaea;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.oj-questions-categories li {
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+}
+
+.oj-questions-categories h4 {
+  background-color: var(--ians-colour-blue-mid);
+  color: white;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  margin-top: 0;
+  border-left-width: 10px;
+  background-color: var(--oj-light-blue);
+  padding: 2rem;
+  color: var(--oj-blue);
+}
+
+.ians-grid-2.oj-involvement-container div[class^="ians-video"] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 720px) {
+  .ians-grid-2.oj-involvement-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ians-grid-2.oj-involvement-container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    padding: 2rem;
+  }
+
+  .ians-grid-2.oj-involvement-container p:first-child {
+    margin-top: 1rem;
+  }
+
+  .ians-grid-2.oj-involvement-container div[class^="ians-video"] {
+    margin-top: 1rem;
+  }
+}
+
+.oj-traffic-first {
+  background-color: #9c0e0e;
+}
+
+.oj-traffic-first p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  color: white;
+}

@@ -1,7 +1,7 @@
 "use strict";
 
 export function ScrollToTop() {
-	const htmlString = `<div style="box-sizing: border-box;
+  const htmlString = `<div style="box-sizing: border-box;
   position: absolute;
   top: 12rem;
   right: 2rem;
@@ -59,47 +59,47 @@ export function ScrollToTop() {
     </svg>
   </a>
 </div>`;
-	let frag = document.createRange().createContextualFragment(htmlString);
-	document.body.appendChild(frag);
+  let frag = document.createRange().createContextualFragment(htmlString);
+  document.body.appendChild(frag);
 
-	const circle = document.querySelector(".progress-ring__circle");
-	const radius = circle.r.baseVal.value;
-	const circumference = radius * 2 * Math.PI;
-	circle.style.strokeDasharray = `${circumference} ${circumference}`;
-	// circle.style.strokeDashoffset = circumference;
-	function setProgress(percent) {
-		const offset = circumference - (percent / 100) * circumference;
-		circle.style.strokeDashoffset = offset;
-	}
+  const circle = document.querySelector(".progress-ring__circle");
+  const radius = circle.r.baseVal.value;
+  const circumference = radius * 2 * Math.PI;
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  // circle.style.strokeDashoffset = circumference;
+  function setProgress(percent) {
+    const offset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+  }
 
-	let ticking = false;
+  let ticking = false;
 
-	window.addEventListener("scroll", function (e) {
-		let scrollTop = window.scrollY;
-		let docHeight = document.body.offsetHeight;
-		let winHeight = window.innerHeight;
-		let scrollPercent = scrollTop / (docHeight - winHeight);
-		let scrollPercentRounded = Math.round(scrollPercent * 100);
+  window.addEventListener("scroll", function (e) {
+    let scrollTop = window.scrollY;
+    let docHeight = document.body.offsetHeight;
+    let winHeight = window.innerHeight;
+    let scrollPercent = scrollTop / (docHeight - winHeight);
+    let scrollPercentRounded = Math.round(scrollPercent * 100);
 
-		if (!ticking) {
-			window.requestAnimationFrame(function () {
-				setProgress(scrollPercentRounded);
-				ticking = false;
-			});
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        setProgress(scrollPercentRounded);
+        ticking = false;
+      });
 
-			ticking = true;
-		}
-	});
+      ticking = true;
+    }
+  });
 
-	let link = document.querySelector("#scrollTopLink");
-	link.addEventListener("click", function (event) {
-		event.preventDefault();
-		window.scroll({
-			top: 0,
-			left: 0,
-			behavior: "smooth",
-		});
-	});
+  let link = document.querySelector("#scrollTopLink");
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
 
-	setProgress(0);
+  setProgress(0);
 }

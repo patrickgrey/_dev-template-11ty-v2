@@ -1,0 +1,20 @@
+body {
+  color: var(--ians-colour-grey-dark);
+  line-height: 1.7;
+  font-family: roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-weight: 300;
+  overflow-wrap: break-word;
+}
+
+textarea {
+  width: 100%;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+/* fieldset {
+  page-break-after: always;
+} */
